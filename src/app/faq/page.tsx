@@ -6,18 +6,13 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import {
   CaretDown,
   MagnifyingGlass,
-  MapPin,
-  ChartLineUp,
-  CurrencyDollar,
-  Wrench,
-  Star,
-  Buildings,
 } from '@phosphor-icons/react';
+import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
 
 type FAQCategory = {
   id: string;
   label: string;
-  icon: React.ElementType;
+  icon: FreehandIconName;
   items: { q: string; a: string }[];
 };
 
@@ -25,7 +20,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: 'siva',
     label: 'Siva & nos services',
-    icon: MapPin,
+    icon: 'map-pin' as const,
     items: [
       {
         q: 'Qu\'est-ce que Siva fait concrètement ?',
@@ -48,7 +43,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: 'audit',
     label: 'Audit gratuit',
-    icon: Star,
+    icon: 'star' as const,
     items: [
       {
         q: 'L\'audit gratuit est-il vraiment gratuit ?',
@@ -71,7 +66,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: 'optimisation',
     label: 'Optimisation fiche Google',
-    icon: Wrench,
+    icon: 'wrench' as const,
     items: [
       {
         q: 'En quoi consiste l\'optimisation de ma fiche Google ?',
@@ -94,7 +89,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: 'boost-avis',
     label: 'Boost Avis Expérience',
-    icon: Star,
+    icon: 'star' as const,
     items: [
       {
         q: 'Comment fonctionne le Boost Avis Expérience ?',
@@ -121,7 +116,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: 'google-ads',
     label: 'Google Ads Local',
-    icon: ChartLineUp,
+    icon: 'chart-line' as const,
     items: [
       {
         q: 'En quoi consiste le service Google Ads Local ?',
@@ -144,7 +139,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: 'tarifs',
     label: 'Tarifs & engagement',
-    icon: CurrencyDollar,
+    icon: 'dollar' as const,
     items: [
       {
         q: 'Récapitulez-moi vos tarifs.',
@@ -167,7 +162,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
   {
     id: 'profil',
     label: 'Pour qui ?',
-    icon: Buildings,
+    icon: 'building' as const,
     items: [
       {
         q: 'Je suis un indépendant ou une TPE, c\'est fait pour moi ?',
@@ -249,14 +244,12 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 }
 
 function CategorySection({ category }: { category: FAQCategory }) {
-  const Icon = category.icon;
-
   return (
     <div id={category.id} className="scroll-mt-32">
       <Reveal>
         <div className="mb-4 flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15">
-            <Icon weight="fill" className="h-5 w-5 text-accent-dark" />
+            <FreehandIcon name={category.icon} size={20} className="text-accent-dark" />
           </div>
           <h2 className="text-heading-lg text-warm-900">{category.label}</h2>
         </div>
@@ -339,9 +332,7 @@ export default function FAQPage() {
               >
                 Tout voir
               </button>
-              {FAQ_CATEGORIES.map((cat) => {
-                const Icon = cat.icon;
-                return (
+              {FAQ_CATEGORIES.map((cat) => (
                   <button
                     key={cat.id}
                     onClick={() =>
@@ -353,11 +344,10 @@ export default function FAQPage() {
                         : 'bg-white text-warm-600 border border-warm-200 hover:border-warm-300 hover:text-warm-800'
                     }`}
                   >
-                    <Icon weight="bold" className="h-4 w-4" />
+                    <FreehandIcon name={cat.icon} size={16} />
                     {cat.label}
                   </button>
-                );
-              })}
+              ))}
             </div>
           </Reveal>
         </div>

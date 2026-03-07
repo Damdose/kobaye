@@ -5,23 +5,17 @@ import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import {
   CheckCircle,
-  Camera,
   ClockCountdown,
-  Globe,
-  ListChecks,
-  MagnifyingGlass,
   NotePencil,
-  Sliders,
   Star,
-  TextAa,
   MapPin,
   Clock,
   Image as ImageIcon,
   CaretDown,
-  Warning,
   Lightbulb,
   Trophy,
 } from '@phosphor-icons/react';
+import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
 
 const CLIENT_LOGOS = [
   { name: 'Brand 05', logo: '/logos/brand-logo-05.svg' },
@@ -90,32 +84,32 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 const FEATURES = [
   {
-    Icon: Sliders,
+    icon: 'sliders' as const,
     title: 'Catégories & attributs',
     description: 'On sélectionne les catégories primaires et secondaires optimales pour maximiser votre visibilité sur les bonnes requêtes.',
   },
   {
-    Icon: TextAa,
+    icon: 'text' as const,
     title: 'Description optimisée SEO',
     description: 'Une description rédigée par nos experts, enrichie en mots-clés locaux stratégiques pour Google.',
   },
   {
-    Icon: Camera,
+    icon: 'camera' as const,
     title: 'Photos structurées',
     description: 'Upload et organisation de vos photos selon les bonnes pratiques Google : logo, couverture, intérieur, équipe, produits.',
   },
   {
-    Icon: ListChecks,
+    icon: 'list-checks' as const,
     title: 'Q&A, produits, services',
     description: 'Configuration complète des sections produits/services, FAQ pré-remplie et horaires optimisés.',
   },
   {
-    Icon: Star,
+    icon: 'star' as const,
     title: 'Premiers posts Google',
     description: 'Publication de vos premiers posts pour activer la fiche et envoyer des signaux de fraîcheur à Google.',
   },
   {
-    Icon: Globe,
+    icon: 'globe' as const,
     title: 'Cohérence NAP',
     description: 'Vérification et correction du Nom, Adresse, Téléphone sur les annuaires principaux (Pages Jaunes, Yelp, etc.).',
   },
@@ -131,9 +125,9 @@ const INCLUDED = [
 ];
 
 const STEPS = [
-  { num: '1', Icon: MagnifyingGlass, title: 'Audit de la fiche actuelle', desc: 'On passe votre fiche au peigne fin et on identifie tous les axes d\'amélioration.' },
-  { num: '2', Icon: NotePencil, title: 'Optimisation complète', desc: 'On optimise chaque section : catégories, description, photos, attributs, Q&A, services.' },
-  { num: '3', Icon: ClockCountdown, title: 'Livraison en 5 jours', desc: 'Votre fiche optimisée est livrée avec un rapport détaillé de toutes les modifications.' },
+  { num: '1', icon: 'search' as const, title: 'Audit de la fiche actuelle', desc: 'On passe votre fiche au peigne fin et on identifie tous les axes d\'amélioration.' },
+  { num: '2', icon: 'pencil' as const, title: 'Optimisation complète', desc: 'On optimise chaque section : catégories, description, photos, attributs, Q&A, services.' },
+  { num: '3', icon: 'clock' as const, title: 'Livraison en 5 jours', desc: 'Votre fiche optimisée est livrée avec un rapport détaillé de toutes les modifications.' },
 ];
 
 const SCORE_ITEMS = [
@@ -146,17 +140,17 @@ const SCORE_ITEMS = [
 
 const PROBLEMS = [
   {
-    Icon: Warning,
+    icon: 'warning' as const,
     title: 'Fiche incomplète = invisible',
     description: 'Google pénalise les fiches mal renseignées. Si vos catégories, attributs ou photos manquent, vous perdez des positions chaque jour.',
   },
   {
-    Icon: MapPin,
+    icon: 'map-pin' as const,
     title: 'Vos concurrents vous dépassent',
     description: 'Les commerces avec des fiches optimisées reçoivent 7x plus de clics que les fiches basiques. Chaque détail compte dans le classement.',
   },
   {
-    Icon: MagnifyingGlass,
+    icon: 'search' as const,
     title: 'Mauvaises catégories = mauvais clients',
     description: 'Avec les mauvaises catégories, Google vous montre aux mauvaises personnes. Vous manquez les requêtes qui convertissent vraiment.',
   },
@@ -407,7 +401,7 @@ export default function OptimisationFicheGooglePage() {
               <Reveal key={problem.title} delay={i * 0.08}>
                 <div className="relative flex h-full flex-col items-start gap-4 rounded-2xl border border-red-100 bg-red-50/30 p-6">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-red-100 text-red-600">
-                    <problem.Icon weight="bold" className="h-5 w-5" />
+                    <FreehandIcon name={problem.icon} size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-warm-900">{problem.title}</h3>
@@ -499,7 +493,7 @@ export default function OptimisationFicheGooglePage() {
               <Reveal key={step.num} delay={i * 0.1}>
                 <div className="text-center">
                   <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-accent">
-                    <step.Icon weight="bold" className="h-6 w-6" />
+                    <FreehandIcon name={step.icon} size={24} />
                   </div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wider text-accent">Étape {step.num}</p>
                   <h3 className="text-lg font-medium text-white">{step.title}</h3>
@@ -526,7 +520,7 @@ export default function OptimisationFicheGooglePage() {
               <Reveal key={feat.title} delay={i * 0.06}>
                 <div className="card-hover group relative flex h-full flex-col items-start gap-4 p-6">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-warm-100 text-warm-700 transition-colors group-hover:bg-accent-light group-hover:text-accent-dark">
-                    <feat.Icon weight="bold" className="h-5 w-5" />
+                    <FreehandIcon name={feat.icon} size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-warm-900">{feat.title}</h3>

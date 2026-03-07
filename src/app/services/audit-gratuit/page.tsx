@@ -6,22 +6,15 @@ import { useRouter } from 'next/navigation';
 import { motion, useInView } from 'framer-motion';
 import {
   CaretDown,
-  ChartBar,
   CheckCircle,
   Clock,
-  Eye,
   Lightbulb,
-  Lightning,
-  MagnifyingGlass,
-  MapTrifold,
   Sparkle,
   Star,
-  Target,
   Trophy,
-  UsersThree,
-  Warning,
 } from '@phosphor-icons/react';
 import PlaceSearchInput from '@/components/audit/PlaceSearchInput';
+import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
 import { PlaceResult } from '@/lib/types';
 
 const CLIENT_LOGOS = [
@@ -89,58 +82,58 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-const FEATURES = [
+const FEATURES: { icon: FreehandIconName; title: string; description: string }[] = [
   {
-    Icon: ChartBar,
+    icon: 'chart-bar',
     title: 'Score d\'optimisation',
     description: 'Obtenez un score sur 100 qui évalue l\'optimisation complète de votre fiche Google Business Profile.',
   },
   {
-    Icon: MapTrifold,
+    icon: 'map',
     title: 'Heatmap de positions',
     description: 'Visualisez sur une carte interactive vos positions pour chaque mot-clé, zone par zone autour de votre établissement.',
   },
   {
-    Icon: UsersThree,
+    icon: 'users',
     title: 'Analyse concurrentielle',
     description: 'Découvrez qui domine votre zone et sur quels mots-clés vos concurrents vous dépassent.',
   },
   {
-    Icon: Sparkle,
+    icon: 'sparkle',
     title: 'Recommandations IA',
     description: 'Recevez des recommandations personnalisées et actionnables générées par notre intelligence artificielle.',
   },
   {
-    Icon: Target,
+    icon: 'target',
     title: 'Estimation de revenus',
     description: 'Estimez le chiffre d\'affaires que vous perdez chaque mois à cause de votre manque de visibilité locale.',
   },
   {
-    Icon: Eye,
+    icon: 'eye',
     title: 'Visibilité IA',
     description: 'Analysez votre présence dans les réponses des assistants IA (ChatGPT, Gemini) pour vos requêtes locales.',
   },
 ];
 
-const STEPS = [
-  { num: '1', Icon: MagnifyingGlass, title: 'Recherchez votre établissement', desc: 'Tapez le nom de votre commerce et sélectionnez-le dans les résultats Google.' },
-  { num: '2', Icon: Target, title: 'Choisissez vos mots-clés', desc: 'Sélectionnez 3 mots-clés stratégiques parmi nos suggestions adaptées à votre activité.' },
-  { num: '3', Icon: Lightning, title: 'Recevez votre rapport', desc: 'En 30 secondes, obtenez un diagnostic complet avec score, heatmap et recommandations.' },
+const STEPS: { num: string; icon: FreehandIconName; title: string; desc: string }[] = [
+  { num: '1', icon: 'search', title: 'Recherchez votre établissement', desc: 'Tapez le nom de votre commerce et sélectionnez-le dans les résultats Google.' },
+  { num: '2', icon: 'target', title: 'Choisissez vos mots-clés', desc: 'Sélectionnez 3 mots-clés stratégiques parmi nos suggestions adaptées à votre activité.' },
+  { num: '3', icon: 'lightning', title: 'Recevez votre rapport', desc: 'En 30 secondes, obtenez un diagnostic complet avec score, heatmap et recommandations.' },
 ];
 
-const PROBLEMS = [
+const PROBLEMS: { icon: FreehandIconName; title: string; description: string }[] = [
   {
-    Icon: Warning,
+    icon: 'warning',
     title: 'Vous ne savez pas où vous en êtes',
     description: 'Sans données, impossible de savoir si votre fiche Google travaille pour vous ou contre vous. Vous avancez à l\'aveugle.',
   },
   {
-    Icon: Eye,
+    icon: 'eye',
     title: 'Vos concurrents vous dépassent',
     description: 'D\'autres commerces captent vos clients potentiels sur Google Maps. Sans audit, vous ne savez même pas qui ni comment.',
   },
   {
-    Icon: ChartBar,
+    icon: 'chart-bar',
     title: 'Vous perdez du CA chaque jour',
     description: 'Chaque jour sans visibilité locale, c\'est des appels, des visites et des clients qui vont chez la concurrence.',
   },
@@ -391,7 +384,7 @@ export default function AuditGratuitServicePage() {
               <Reveal key={problem.title} delay={i * 0.08}>
                 <div className="relative flex h-full flex-col items-start gap-4 rounded-2xl border border-red-100 bg-red-50/30 p-6">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-red-100 text-red-600">
-                    <problem.Icon weight="bold" className="h-5 w-5" />
+                    <FreehandIcon name={problem.icon} size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-warm-900">{problem.title}</h3>
@@ -454,7 +447,7 @@ export default function AuditGratuitServicePage() {
               <Reveal key={step.num} delay={i * 0.1}>
                 <div className="text-center">
                   <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-accent">
-                    <step.Icon weight="bold" className="h-6 w-6" />
+                    <FreehandIcon name={step.icon} size={24} />
                   </div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wider text-accent">Étape {step.num}</p>
                   <h3 className="text-lg font-medium text-white">{step.title}</h3>
@@ -481,7 +474,7 @@ export default function AuditGratuitServicePage() {
               <Reveal key={feat.title} delay={i * 0.06}>
                 <div className="card-hover group relative flex h-full flex-col items-start gap-4 p-6">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-warm-100 text-warm-700 transition-colors group-hover:bg-accent-light group-hover:text-accent-dark">
-                    <feat.Icon weight="bold" className="h-5 w-5" />
+                    <FreehandIcon name={feat.icon} size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-warm-900">{feat.title}</h3>

@@ -6,29 +6,17 @@ import Link from 'next/link';
 
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import {
-  RiArrowRightLine,
-  RiVerifiedBadgeFill,
-  RiCalendarScheduleFill,
-  RiCheckboxCircleFill,
-  RiArrowDownSLine,
-  RiTimeLine,
-  RiFileEditFill,
-  RiMapPin2Fill,
-  RiSearchLine,
-  RiShieldCheckFill,
-  RiSparklingFill,
   RiStarFill,
   RiStarLine,
-  RiLineChartFill,
+  RiSearchLine,
+  RiMapPin2Fill,
+  RiTimeLine,
+  RiCheckboxCircleFill,
+  RiSparklingFill,
+  RiArrowRightLine,
+  RiShieldCheckFill,
 } from 'react-icons/ri';
-import {
-  Sparkle,
-  Crosshair,
-  MagnifyingGlass,
-  ChartPie,
-  ChartLineUp,
-  CalendarCheck,
-} from '@phosphor-icons/react';
+import FreehandIcon from '@/components/FreehandIcon';
 import PlaceSearchInput from '@/components/audit/PlaceSearchInput';
 import { PlaceResult } from '@/lib/types';
 
@@ -82,7 +70,7 @@ const RESULTS_SHOWCASE = [
 
 const VALUE_PROPS = [
   {
-    Icon: Sparkle,
+    icon: 'sparkle' as const,
     stat: 'IA',
     statLabel: 'intégrée',
     title: 'L\'IA fait le travail invisible',
@@ -90,7 +78,7 @@ const VALUE_PROPS = [
       'Nos algorithmes analysent des centaines de signaux en temps réel : mots-clés sous-exploités, tendances émergentes, failles de vos concurrents. On détecte ce que l\'œil humain ne voit pas.',
   },
   {
-    Icon: Crosshair,
+    icon: 'crosshair' as const,
     stat: 'Zone',
     statLabel: 'par zone',
     title: 'Scan précis, zone par zone',
@@ -98,7 +86,7 @@ const VALUE_PROPS = [
       'Pas de moyenne globale. On analyse votre positionnement rue par rue, quartier par quartier, pour savoir exactement où vous êtes visible — et où vous ne l\'êtes pas.',
   },
   {
-    Icon: MagnifyingGlass,
+    icon: 'search' as const,
     stat: '+8 ans',
     statLabel: 'd\'expérience',
     title: 'Le SEO local, rien d\'autre',
@@ -106,7 +94,7 @@ const VALUE_PROPS = [
       'On ne fait pas de SEO "classique" ou de la com\' généraliste. Le référencement local est notre seul métier depuis des années. C\'est cette hyper-spécialisation qui fait la différence.',
   },
   {
-    Icon: ChartPie,
+    icon: 'chart-pie' as const,
     stat: '100%',
     statLabel: 'data-driven',
     title: '100% piloté par la data',
@@ -114,7 +102,7 @@ const VALUE_PROPS = [
       'Chaque décision est basée sur des chiffres réels : positions, clics, appels, avis, taux de conversion. Zéro intuition, zéro bullshit — que du mesurable.',
   },
   {
-    Icon: ChartLineUp,
+    icon: 'chart-line' as const,
     stat: 'Droit',
     statLabel: 'au but',
     title: 'Pas de bla-bla, des résultats',
@@ -122,7 +110,7 @@ const VALUE_PROPS = [
       'On ne vend pas des slides ou des rapports de 50 pages. On exécute, on optimise, on mesure. Vous voyez la progression chaque semaine dans votre dashboard.',
   },
   {
-    Icon: CalendarCheck,
+    icon: 'calendar' as const,
     stat: '1/sem',
     statLabel: 'de suivi',
     title: 'Un suivi serré, chaque semaine',
@@ -136,21 +124,21 @@ const VALUE_PROPS = [
 const PROCESS_STEPS = [
   {
     id: '1',
-    Icon: RiCalendarScheduleFill,
+    icon: 'calendar' as const,
     title: 'Prise de rendez-vous',
     description:
       'Réservez un créneau de 15 min avec notre équipe. On échange sur vos objectifs et on évalue votre potentiel de croissance locale.',
   },
   {
     id: '2',
-    Icon: RiSearchLine,
+    icon: 'search' as const,
     title: 'Audit gratuit',
     description:
       'On analyse votre fiche Google, vos positions, vos concurrents et vos avis. Vous recevez un rapport complet sans engagement.',
   },
   {
     id: '3',
-    Icon: RiLineChartFill,
+    icon: 'chart-line' as const,
     title: 'On booste votre présence',
     description:
       'Notre équipe optimise votre visibilité sur Google Maps : fiche, avis, contenu et positionnement. Vous voyez les résultats chaque semaine.',
@@ -159,7 +147,7 @@ const PROCESS_STEPS = [
 
 const PRICING_PLANS = [
   {
-    Icon: RiSearchLine,
+    icon: 'search' as const,
     tag: 'Gratuit',
     title: 'Audit Fiche Google',
     basePrice: 0,
@@ -179,7 +167,7 @@ const PRICING_PLANS = [
     badge: null,
   },
   {
-    Icon: RiFileEditFill,
+    icon: 'pencil' as const,
     tag: 'One-shot',
     title: 'Optimisation Fiche Google',
     basePrice: 790,
@@ -200,7 +188,7 @@ const PRICING_PLANS = [
     badge: 'Populaire',
   },
   {
-    Icon: RiVerifiedBadgeFill,
+    icon: 'check-badge' as const,
     tag: 'Sélectif',
     title: 'Boost Avis Expérience',
     basePrice: null as number | null,
@@ -495,8 +483,10 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         <span className="text-sm font-medium text-warm-800 transition-colors group-hover:text-warm-900 sm:text-lg">
           {question}
         </span>
-        <RiArrowDownSLine
-          className={`h-4 w-4 shrink-0 text-warm-400 transition-transform duration-300 sm:h-5 sm:w-5 ${open ? 'rotate-180' : ''}`}
+        <FreehandIcon
+          name="arrow-right"
+          size={16}
+          className={`shrink-0 text-warm-400 transition-transform duration-300 ${open ? '-rotate-90' : 'rotate-90'}`}
         />
       </button>
       <motion.div
@@ -580,7 +570,7 @@ export default function HomePage() {
             <div className="mx-auto max-w-4xl text-center">
               <Reveal>
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-warm-200 bg-white px-3.5 py-2 text-xs font-semibold shadow-soft sm:mb-6 sm:px-5 sm:py-2.5 sm:text-sm">
-                  <RiMapPin2Fill className="h-3.5 w-3.5 text-accent-dark sm:h-4 sm:w-4" />
+                  <FreehandIcon name="map-pin" size={14} className="text-accent-dark" />
                   Agence SEO local basée à Paris
                 </div>
               </Reveal>
@@ -599,7 +589,7 @@ export default function HomePage() {
               </Reveal>
 
               <Reveal delay={0.24}>
-                <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4">
+                <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:items-stretch sm:gap-4">
                   <a href="/rendez-vous" className="btn-primary btn-hero">
                     Parler à un expert
                   </a>
@@ -1186,7 +1176,7 @@ export default function HomePage() {
                   <div className="group relative flex h-full flex-col items-start gap-4 rounded-xl border border-warm-200/80 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] sm:gap-5 sm:rounded-2xl sm:p-7">
                     <div className="relative h-[60px] w-[60px] rounded-[10px] bg-gradient-to-b from-[#d0d0d0] via-[#b8b8b8] to-[#a0a0a0] p-[5px] shadow-[0_2px_8px_rgba(100,100,100,0.18),0_4px_14px_rgba(100,100,100,0.12)] transition-all duration-300 group-hover:shadow-[0_4px_16px_rgba(100,100,100,0.24),0_6px_22px_rgba(100,100,100,0.14)] sm:h-[70px] sm:w-[70px] sm:rounded-[12px] sm:p-[6px]">
                       <div className="flex h-full w-full items-center justify-center rounded-[6px] border border-white/60 bg-gradient-to-b from-white from-30% via-[#f4f4f4] via-65% to-[#e2e2e2] shadow-[inset_0_1.5px_0_rgba(255,255,255,0.95)] sm:rounded-[7px]">
-                        <prop.Icon weight="bold" className="h-7 w-7 text-[#1d1d1f] sm:h-[34px] sm:w-[34px]" />
+                        <FreehandIcon name={prop.icon} size={34} className="text-[#1d1d1f]" />
                       </div>
                     </div>
                     <span className="text-[11px] font-semibold uppercase tracking-widest text-warm-400 transition-colors duration-300 group-hover:text-accent-dark sm:text-xs">
@@ -1255,9 +1245,7 @@ export default function HomePage() {
                 <Reveal key={article.title} delay={i * 0.12} variant="rotate-in">
                   <Link href="/blog" className="group flex h-full flex-col overflow-hidden rounded-2xl border border-warm-200 bg-white shadow-soft transition-all hover:-translate-y-1 hover:shadow-card sm:rounded-3xl">
                     <div className="relative h-36 overflow-hidden bg-gradient-to-br from-warm-100 via-warm-200/60 to-accent-light/30 flex items-center justify-center sm:h-48">
-                      <svg className="h-10 w-10 text-warm-300 transition-transform duration-500 group-hover:scale-110 sm:h-12 sm:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-                      </svg>
+                      <FreehandIcon name="notebook" size={48} className="text-warm-300 transition-transform duration-500 group-hover:scale-110" />
                     </div>
                     <div className="flex flex-1 flex-col p-5 sm:p-7">
                       <span className="mb-3 inline-block w-fit rounded-full bg-accent-light px-2.5 py-0.5 text-[11px] font-semibold text-accent-dark sm:mb-4 sm:px-3 sm:py-1 sm:text-xs">

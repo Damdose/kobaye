@@ -5,21 +5,16 @@ import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import {
   CheckCircle,
-  ChartLineUp,
-  CurrencyCircleDollar,
-  MagnifyingGlass,
   Megaphone,
   Phone,
-  Target,
-  UsersFour,
   TrendUp,
   CursorClick,
   CaretDown,
-  Warning,
   ShieldCheck,
   Lightbulb,
   Star,
 } from '@phosphor-icons/react';
+import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
 
 const CLIENT_LOGOS = [
   { name: 'Brand 05', logo: '/logos/brand-logo-05.svg' },
@@ -88,32 +83,32 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 const FEATURES = [
   {
-    Icon: Target,
+    icon: 'target' as const,
     title: 'Ciblage hyper-local',
     description: 'Vos annonces apparaissent uniquement auprès de prospects dans votre zone de chalandise. Pas de dépense inutile.',
   },
   {
-    Icon: Phone,
+    icon: 'phone' as const,
     title: 'Tracking complet',
     description: 'Chaque appel, chaque formulaire, chaque demande d\'itinéraire est tracké. Vous savez exactement ce que rapporte chaque euro investi.',
   },
   {
-    Icon: ChartLineUp,
+    icon: 'chart-line' as const,
     title: 'Optimisation continue',
     description: 'On ajuste les enchères, le ciblage et les annonces chaque semaine pour maximiser votre ROI.',
   },
   {
-    Icon: CurrencyCircleDollar,
+    icon: 'dollar' as const,
     title: 'Coût par lead transparent',
     description: 'Reporting mensuel avec le coût par lead réel. Pas de vanity metrics, que du concret.',
   },
   {
-    Icon: UsersFour,
+    icon: 'users' as const,
     title: 'Local Service Ads',
     description: 'Si vous êtes éligible, on setup vos LSA pour apparaître tout en haut avec le badge "Garanti par Google".',
   },
   {
-    Icon: MagnifyingGlass,
+    icon: 'search' as const,
     title: 'Mots-clés locaux',
     description: 'Recherche approfondie des termes que vos clients potentiels utilisent réellement dans votre zone.',
   },
@@ -140,26 +135,26 @@ const WEEKLY_DATA = [
 
 const PROBLEMS = [
   {
-    Icon: Warning,
+    icon: 'warning' as const,
     title: 'Budget brûlé en clics inutiles',
     description: 'Vous payez pour des clics de personnes qui ne sont même pas dans votre ville. Votre agence vous montre des impressions, mais aucun appel.',
   },
   {
-    Icon: Target,
+    icon: 'target' as const,
     title: 'Ciblage trop large',
     description: 'Vos campagnes touchent toute la France alors que vous n\'opérez que dans un rayon de 15 km. Résultat : un CPL exorbitant.',
   },
   {
-    Icon: CurrencyCircleDollar,
+    icon: 'dollar' as const,
     title: 'Aucune idée du ROI réel',
     description: 'Vous savez combien vous dépensez, mais vous n\'avez aucune idée du nombre de vrais clients que ça génère.',
   },
 ];
 
 const PROCESS = [
-  { num: '1', Icon: MagnifyingGlass, title: 'Audit & stratégie', desc: 'On analyse votre marché local, vos concurrents et vos mots-clés pour définir une stratégie sur-mesure.' },
-  { num: '2', Icon: Megaphone, title: 'Lancement des campagnes', desc: 'On crée vos campagnes Search locales, le tracking et les LSA si vous êtes éligible.' },
-  { num: '3', Icon: ChartLineUp, title: 'Optimisation & scaling', desc: 'Chaque semaine on optimise les enchères, les annonces et le ciblage pour baisser votre CPL.' },
+  { num: '1', icon: 'search' as const, title: 'Audit & stratégie', desc: 'On analyse votre marché local, vos concurrents et vos mots-clés pour définir une stratégie sur-mesure.' },
+  { num: '2', icon: 'megaphone' as const, title: 'Lancement des campagnes', desc: 'On crée vos campagnes Search locales, le tracking et les LSA si vous êtes éligible.' },
+  { num: '3', icon: 'chart-line' as const, title: 'Optimisation & scaling', desc: 'Chaque semaine on optimise les enchères, les annonces et le ciblage pour baisser votre CPL.' },
 ];
 
 const STATS = [
@@ -400,7 +395,7 @@ export default function GoogleAdsLocalPage() {
               <Reveal key={problem.title} delay={i * 0.08}>
                 <div className="relative flex h-full flex-col items-start gap-4 rounded-2xl border border-red-100 bg-red-50/30 p-6">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-red-100 text-red-600">
-                    <problem.Icon weight="bold" className="h-5 w-5" />
+                    <FreehandIcon name={problem.icon} size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-warm-900">{problem.title}</h3>
@@ -463,7 +458,7 @@ export default function GoogleAdsLocalPage() {
               <Reveal key={feat.title} delay={i * 0.06}>
                 <div className="card-hover group relative flex h-full flex-col items-start gap-4 p-6">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-warm-100 text-warm-700 transition-colors group-hover:bg-accent-light group-hover:text-accent-dark">
-                    <feat.Icon weight="bold" className="h-5 w-5" />
+                    <FreehandIcon name={feat.icon} size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-warm-900">{feat.title}</h3>
@@ -491,7 +486,7 @@ export default function GoogleAdsLocalPage() {
               <Reveal key={step.num} delay={i * 0.1}>
                 <div className="text-center">
                   <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-accent">
-                    <step.Icon weight="bold" className="h-6 w-6" />
+                    <FreehandIcon name={step.icon} size={24} />
                   </div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wider text-accent">Étape {step.num}</p>
                   <h3 className="text-lg font-medium text-white">{step.title}</h3>

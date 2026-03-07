@@ -3,24 +3,25 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { List, X, CaretDown, ChartBar, Megaphone, NotePencil, SealCheck, BookOpenText, ChatCircleDots, Notebook } from '@phosphor-icons/react';
+import { List, X, CaretDown } from '@phosphor-icons/react';
+import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
 
 const FRENCH_MONTHS = [
   'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
   'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre',
 ];
 
-const SERVICE_ITEMS = [
-  { href: '/services/audit-gratuit', label: 'Audit Gratuit', description: 'Gratuit · Score, heatmap, concurrents & recommandations IA', Icon: ChartBar },
-  { href: '/services/optimisation-fiche-google', label: 'Optimisation Fiche Google', description: '500€ one-shot · Fiche 100% optimisée pour convertir', Icon: NotePencil },
-  { href: '/services/boost-avis-experience', label: 'Boost Avis Expérience', description: 'Sur devis · De vrais avis par de vrais clients', Icon: SealCheck },
-  { href: '/services/google-ads-local', label: 'Google Ads Local', description: 'Dès 400€/mois · Campagnes Search & LSA locales', Icon: Megaphone },
+const SERVICE_ITEMS: { href: string; label: string; description: string; icon: FreehandIconName }[] = [
+  { href: '/services/audit-gratuit', label: 'Audit Gratuit', description: 'Gratuit · Score, heatmap, concurrents & recommandations IA', icon: 'chart-bar' },
+  { href: '/services/optimisation-fiche-google', label: 'Optimisation Fiche Google', description: '500€ one-shot · Fiche 100% optimisée pour convertir', icon: 'pencil' },
+  { href: '/services/boost-avis-experience', label: 'Boost Avis Expérience', description: 'Sur devis · De vrais avis par de vrais clients', icon: 'check-badge' },
+  { href: '/services/google-ads-local', label: 'Google Ads Local', description: 'Dès 400€/mois · Campagnes Search & LSA locales', icon: 'megaphone' },
 ];
 
-const RESOURCE_ITEMS = [
-  { href: '/blog', label: 'Blog', description: 'Guides, études de cas & stratégies SEO', Icon: BookOpenText },
-  { href: '/faq', label: 'FAQ', description: 'Réponses à vos questions fréquentes', Icon: ChatCircleDots },
-  { href: '/glossaire', label: 'Glossaire', description: 'Tous les termes du SEO local expliqués', Icon: Notebook },
+const RESOURCE_ITEMS: { href: string; label: string; description: string; icon: FreehandIconName }[] = [
+  { href: '/blog', label: 'Blog', description: 'Guides, études de cas & stratégies SEO', icon: 'book' },
+  { href: '/faq', label: 'FAQ', description: 'Réponses à vos questions fréquentes', icon: 'chat' },
+  { href: '/glossaire', label: 'Glossaire', description: 'Tous les termes du SEO local expliqués', icon: 'notebook' },
 ];
 
 const NAV_LINKS = [
@@ -121,7 +122,7 @@ export default function Header() {
                     className="group relative flex items-start gap-3.5 rounded-xl px-3.5 py-3 transition-colors hover:bg-warm-50"
                   >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-warm-100 text-warm-600 transition-colors group-hover:bg-accent-light group-hover:text-accent-dark">
-                      <item.Icon weight="bold" className="h-5 w-5" />
+                      <FreehandIcon name={item.icon} size={20} />
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-warm-900">{item.label}</p>
@@ -164,7 +165,7 @@ export default function Header() {
                     className="group relative flex items-start gap-3.5 rounded-xl px-3.5 py-3 transition-colors hover:bg-warm-50"
                   >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-warm-100 text-warm-600 transition-colors group-hover:bg-accent-light group-hover:text-accent-dark">
-                      <item.Icon weight="bold" className="h-5 w-5" />
+                      <FreehandIcon name={item.icon} size={20} />
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-warm-900">{item.label}</p>
@@ -188,7 +189,7 @@ export default function Header() {
 
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 lg:items-stretch">
           <Link
             href="/contact"
             className="btn-secondary hidden !border !border-warm-200 !py-[0.85rem] !px-5 !text-sm !font-medium lg:inline-flex"
@@ -235,7 +236,7 @@ export default function Header() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-warm-100"
                   >
-                    <item.Icon weight="bold" className="h-4 w-4 text-warm-500" />
+                    <FreehandIcon name={item.icon} size={16} className="text-warm-500" />
                     <div>
                       <p className="text-sm font-medium text-warm-800">{item.label}</p>
                       <p className="text-[11px] text-warm-500">{item.description}</p>
@@ -273,7 +274,7 @@ export default function Header() {
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-warm-100"
                   >
-                    <item.Icon weight="bold" className="h-4 w-4 text-warm-500" />
+                    <FreehandIcon name={item.icon} size={16} className="text-warm-500" />
                     <div>
                       <p className="text-sm font-medium text-warm-800">{item.label}</p>
                       <p className="text-[11px] text-warm-500">{item.description}</p>

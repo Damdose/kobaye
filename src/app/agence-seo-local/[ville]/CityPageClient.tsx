@@ -13,11 +13,8 @@ import {
   RiTimeLine,
   RiPhoneFill,
   RiArrowDownSLine,
-  RiSparklingFill,
-  RiLineChartFill,
-  RiFileEditFill,
-  RiCalendarScheduleFill,
 } from 'react-icons/ri';
+import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
 import PlaceSearchInput from '@/components/audit/PlaceSearchInput';
 import { PlaceResult } from '@/lib/types';
 import { City } from '@/lib/cities';
@@ -230,17 +227,17 @@ export default function CityPageClient({ city, otherCities }: CityPageClientProp
           <div className="grid gap-5 sm:gap-6 lg:grid-cols-3">
             {[
               {
-                icon: RiSearchLine,
+                icon: 'search' as const,
                 title: 'Fiche Google non optimisée',
                 description: `La plupart des fiches Google Business à ${city.name} sont incomplètes : catégories mal choisies, descriptions absentes, photos manquantes. Google les relègue en bas de page.`,
               },
               {
-                icon: RiStarFill,
+                icon: 'star' as const,
                 title: 'Pas assez d\'avis Google',
                 description: `À ${city.name}, les entreprises en tête de Google Maps ont en moyenne 3x plus d'avis que leurs concurrents. Sans stratégie d'avis, vous êtes invisible.`,
               },
               {
-                icon: RiMapPin2Fill,
+                icon: 'map-pin' as const,
                 title: 'Zone de chalandise mal couverte',
                 description: `Votre fiche peut apparaître en position 1 dans un quartier de ${city.name} et être absente à 500 mètres. Sans analyse par zone, vous perdez des clients.`,
               },
@@ -248,7 +245,7 @@ export default function CityPageClient({ city, otherCities }: CityPageClientProp
               <Reveal key={item.title} delay={i * 0.1}>
                 <div className="group flex h-full flex-col rounded-2xl border border-warm-200 bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card sm:rounded-3xl sm:p-8">
                   <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-red-50 sm:h-12 sm:w-12">
-                    <item.icon className="h-5 w-5 text-red-500 sm:h-6 sm:w-6" />
+                    <FreehandIcon name={item.icon} size={24} className="text-red-500" />
                   </div>
                   <h3 className="text-lg font-medium text-warm-900 sm:text-xl">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-warm-600 sm:text-base">{item.description}</p>
@@ -273,7 +270,7 @@ export default function CityPageClient({ city, otherCities }: CityPageClientProp
           <div className="grid gap-5 sm:gap-6 lg:grid-cols-3">
             {[
               {
-                icon: RiFileEditFill,
+                icon: 'file-text' as const,
                 title: 'Optimisation Fiche Google',
                 price: '790€ HT',
                 tag: 'One-shot',
@@ -287,7 +284,7 @@ export default function CityPageClient({ city, otherCities }: CityPageClientProp
                 href: '/services/optimisation-fiche-google',
               },
               {
-                icon: RiLineChartFill,
+                icon: 'chart-line' as const,
                 title: 'SEO Local Complet',
                 price: 'Sur devis',
                 tag: 'Accompagnement',
@@ -302,7 +299,7 @@ export default function CityPageClient({ city, otherCities }: CityPageClientProp
                 highlighted: true,
               },
               {
-                icon: RiStarFill,
+                icon: 'star' as const,
                 title: 'Boost Avis Expérience',
                 price: 'Sur devis',
                 tag: 'Sélectif',
@@ -369,19 +366,19 @@ export default function CityPageClient({ city, otherCities }: CityPageClientProp
             {[
               {
                 step: '1',
-                icon: RiCalendarScheduleFill,
+                icon: 'calendar' as const,
                 title: 'Audit & Diagnostic',
                 description: `On analyse votre fiche Google, vos positions zone par zone à ${city.name}, vos concurrents locaux et vos avis. Vous recevez un rapport complet gratuitement.`,
               },
               {
                 step: '2',
-                icon: RiSparklingFill,
+                icon: 'sparkle' as const,
                 title: 'Stratégie & Optimisation',
                 description: `On optimise votre fiche Google Business pour les recherches locales à ${city.name}. Catégories, description, photos, publications — tout est calibré pour le top 3.`,
               },
               {
                 step: '3',
-                icon: RiLineChartFill,
+                icon: 'chart-line' as const,
                 title: 'Suivi & Croissance',
                 description: `On suit vos positions dans chaque quartier de ${city.name}, on ajuste la stratégie et on vous envoie un reporting hebdomadaire avec des résultats concrets.`,
               },
@@ -389,7 +386,7 @@ export default function CityPageClient({ city, otherCities }: CityPageClientProp
               <Reveal key={item.step} delay={i * 0.12}>
                 <div className="text-center md:text-left">
                   <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 md:mx-0">
-                    <item.icon className="h-6 w-6 text-accent" />
+                    <FreehandIcon name={item.icon} size={24} className="text-accent" />
                   </div>
                   <p className="mb-1.5 text-[10px] font-bold uppercase tracking-wider text-accent sm:text-xs">
                     Étape {item.step}

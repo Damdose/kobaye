@@ -9,21 +9,13 @@ import {
   Lightbulb,
   MapPin,
   Medal,
-  Storefront,
   Star,
   UsersThree,
-  UserCirclePlus,
   CalendarCheck,
   ForkKnife,
-  Bed,
   Trophy,
-  Camera,
-  Crown,
-  Sparkle,
-  UsersFour,
-  CalendarX,
-  HandCoins,
 } from '@phosphor-icons/react';
+import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
 
 const CLIENT_LOGOS = [
   { name: 'Brand 05', logo: '/logos/brand-logo-05.svg' },
@@ -92,19 +84,19 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 const PROBLEMS = [
   {
-    Icon: UsersFour,
+    icon: 'users' as const satisfies FreehandIconName,
     title: 'Des activités qui se répètent',
     description:
       'Sorties culturelles, pique-niques, réunions... Vos membres veulent de la nouveauté mais le budget limite les possibilités.',
   },
   {
-    Icon: CalendarX,
+    icon: 'calendar' as const satisfies FreehandIconName,
     title: 'Difficile de mobiliser',
     description:
       'La participation baisse quand les activités se ressemblent. Les membres les plus actifs finissent par décrocher.',
   },
   {
-    Icon: HandCoins,
+    icon: 'coins' as const satisfies FreehandIconName,
     title: 'Le budget freine l\'ambition',
     description:
       'Restaurants, hôtels, loisirs... Ces expériences coûtent cher et sont rarement accessibles pour une association.',
@@ -121,21 +113,21 @@ const STATS = [
 const STEPS = [
   {
     num: '1',
-    Icon: UserCirclePlus,
+    icon: 'users' as const satisfies FreehandIconName,
     title: 'Inscrivez votre association',
     description:
       'Remplissez le formulaire avec les infos de votre asso. On valide votre candidature sous 48h.',
   },
   {
     num: '2',
-    Icon: MapPin,
+    icon: 'map-pin' as const satisfies FreehandIconName,
     title: 'Testez des établissements',
     description:
       'Recevez des invitations pour découvrir des restaurants, hôtels, commerces et lieux locaux.',
   },
   {
     num: '3',
-    Icon: Star,
+    icon: 'star' as const satisfies FreehandIconName,
     title: 'Partagez votre expérience',
     description:
       'Laissez un avis honnête et détaillé sur Google. Plus vous êtes actifs, plus vous recevez d\'invitations.',
@@ -144,37 +136,37 @@ const STEPS = [
 
 const BENEFITS = [
   {
-    Icon: ForkKnife,
+    icon: 'store' as const satisfies FreehandIconName,
     title: 'Repas offerts',
     description:
       'Découvrez les meilleurs restaurants de votre ville, menu offert pour vos membres.',
   },
   {
-    Icon: Sparkle,
+    icon: 'sparkle' as const satisfies FreehandIconName,
     title: 'Expériences exclusives',
     description:
       'Accédez à des événements, dégustations et activités réservés à nos ambassadeurs.',
   },
   {
-    Icon: Bed,
+    icon: 'building' as const satisfies FreehandIconName,
     title: 'Séjours & bien-être',
     description:
       'Profitez de nuits d\'hôtel, spas et activités de loisirs pour votre communauté.',
   },
   {
-    Icon: Storefront,
+    icon: 'store' as const satisfies FreehandIconName,
     title: 'Commerces locaux',
     description:
       'Testez des boutiques, salons et commerces de proximité avec des avantages exclusifs.',
   },
   {
-    Icon: Camera,
+    icon: 'camera' as const satisfies FreehandIconName,
     title: 'Visibilité pour votre asso',
     description:
       'Votre association est mise en avant sur nos réseaux et auprès de nos partenaires.',
   },
   {
-    Icon: Crown,
+    icon: 'crown' as const satisfies FreehandIconName,
     title: 'Statut VIP',
     description:
       'Les associations les plus actives accèdent au statut VIP avec des avantages doublés.',
@@ -463,7 +455,7 @@ export default function AmbassadeurPage() {
               <Reveal key={problem.title} delay={i * 0.08}>
                 <div className="relative flex h-full flex-col items-start gap-4 rounded-2xl border border-red-100 bg-red-50/30 p-6">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-red-100 text-red-600">
-                    <problem.Icon weight="bold" className="h-5 w-5" />
+                    <FreehandIcon name={problem.icon} size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-warm-900">{problem.title}</h3>
@@ -527,7 +519,7 @@ export default function AmbassadeurPage() {
               <Reveal key={step.num} delay={i * 0.1}>
                 <div className="text-center">
                   <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-accent">
-                    <step.Icon weight="bold" className="h-6 w-6" />
+                    <FreehandIcon name={step.icon} size={24} />
                   </div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wider text-accent">Étape {step.num}</p>
                   <h3 className="text-lg font-medium text-white">{step.title}</h3>
@@ -558,7 +550,7 @@ export default function AmbassadeurPage() {
               <Reveal key={benefit.title} delay={i * 0.06}>
                 <div className="card-hover group relative flex h-full flex-col items-start gap-4 p-6">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-warm-100 text-warm-700 transition-colors group-hover:bg-accent-light group-hover:text-accent-dark">
-                    <benefit.Icon weight="bold" className="h-5 w-5" />
+                    <FreehandIcon name={benefit.icon} size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-warm-900">{benefit.title}</h3>

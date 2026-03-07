@@ -5,20 +5,14 @@ import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import {
   CheckCircle,
-  Eye,
-  Handshake,
   SealCheck,
-  ShieldCheck,
   Star,
-  UsersThree,
   TrendUp,
   CaretDown,
-  Warning,
   Lightbulb,
-  ChartLineUp,
-  ChatCircleDots,
   Medal,
 } from '@phosphor-icons/react';
+import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
 
 const CLIENT_LOGOS = [
   { name: 'Brand 05', logo: '/logos/brand-logo-05.svg' },
@@ -88,19 +82,19 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 const HOW_IT_WORKS = [
   {
     num: '1',
-    Icon: Handshake,
+    icon: 'handshake' as const,
     title: 'Candidature & sélection',
     description: 'Vous candidatez et on vérifie que votre établissement est éligible. On sélectionne les meilleurs profils.',
   },
   {
     num: '2',
-    Icon: UsersThree,
+    icon: 'users' as const,
     title: 'Visite par nos étudiants',
     description: 'Des étudiants sélectionnés visitent votre établissement et vivent une expérience réelle (repas, soin, service...).',
   },
   {
     num: '3',
-    Icon: Star,
+    icon: 'star' as const,
     title: 'Avis Google authentique',
     description: 'Ils laissent un avis Google détaillé et authentique basé sur leur expérience réelle chez vous.',
   },
@@ -108,22 +102,22 @@ const HOW_IT_WORKS = [
 
 const BENEFITS = [
   {
-    Icon: SealCheck,
+    icon: 'check-badge' as const,
     title: '100% conforme Google',
     description: 'Nos avis respectent scrupuleusement les CGU Google. Ce sont de vrais avis de vraies personnes après une vraie visite.',
   },
   {
-    Icon: Eye,
+    icon: 'eye' as const,
     title: 'Avis détaillés et crédibles',
     description: 'Pas de "Super !" générique. Nos visiteurs rédigent des avis longs, détaillés, avec photos quand c\'est possible.',
   },
   {
-    Icon: ShieldCheck,
+    icon: 'shield' as const,
     title: 'Risque zéro',
     description: 'Aucun risque de pénalité Google. Les visites sont réelles, les expériences authentiques, les avis naturels.',
   },
   {
-    Icon: Star,
+    icon: 'star' as const,
     title: 'Impact SEO direct',
     description: 'Plus d\'avis récents = meilleur classement Google Maps. Chaque avis renforce votre positionnement local.',
   },
@@ -146,17 +140,17 @@ const RECENT_REVIEWS = [
 
 const PROBLEMS = [
   {
-    Icon: Warning,
+    icon: 'warning' as const,
     title: 'Peu d\'avis = peu de confiance',
     description: '88% des consommateurs font autant confiance aux avis en ligne qu\'aux recommandations personnelles. Sans avis récents, vos prospects choisissent vos concurrents.',
   },
   {
-    Icon: ChartLineUp,
+    icon: 'chart-line' as const,
     title: 'Les avis impactent votre ranking',
     description: 'Google considère la quantité et la fraîcheur des avis comme un facteur de classement majeur. Moins d\'avis = moins de visibilité dans le Local Pack.',
   },
   {
-    Icon: ChatCircleDots,
+    icon: 'chat' as const,
     title: 'Demander des avis ne suffit plus',
     description: 'Vos clients satisfaits oublient de laisser un avis. Seuls les mécontents prennent le temps. Résultat : une note qui ne reflète pas la réalité.',
   },
@@ -407,7 +401,7 @@ export default function BoostAvisExperiencePage() {
               <Reveal key={problem.title} delay={i * 0.08}>
                 <div className="relative flex h-full flex-col items-start gap-4 rounded-2xl border border-red-100 bg-red-50/30 p-6">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-red-100 text-red-600">
-                    <problem.Icon weight="bold" className="h-5 w-5" />
+                    <FreehandIcon name={problem.icon} size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-warm-900">{problem.title}</h3>
@@ -470,7 +464,7 @@ export default function BoostAvisExperiencePage() {
               <Reveal key={step.num} delay={i * 0.1}>
                 <div className="text-center">
                   <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-accent">
-                    <step.Icon weight="bold" className="h-6 w-6" />
+                    <FreehandIcon name={step.icon} size={24} />
                   </div>
                   <p className="mb-1.5 text-xs font-bold uppercase tracking-wider text-accent">Étape {step.num}</p>
                   <h3 className="text-lg font-medium text-white">{step.title}</h3>
@@ -500,7 +494,7 @@ export default function BoostAvisExperiencePage() {
               <Reveal key={benefit.title} delay={i * 0.06}>
                 <div className="card-hover group relative flex h-full flex-col items-start gap-4 p-6">
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-warm-100 text-warm-700 transition-colors group-hover:bg-accent-light group-hover:text-accent-dark">
-                    <benefit.Icon weight="bold" className="h-5 w-5" />
+                    <FreehandIcon name={benefit.icon} size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-warm-900">{benefit.title}</h3>
