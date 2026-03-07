@@ -6,15 +6,8 @@ import { motion, useInView } from 'framer-motion';
 import {
   CheckCircle,
   ArrowRight,
-  Star,
-  Phone,
-  MapTrifold,
-  Sparkle,
-  Eye,
-  Globe,
-  CurrencyCircleDollar,
 } from '@phosphor-icons/react';
-import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
+import FreehandIcon from '@/components/FreehandIcon';
 
 const SERVICES = [
   {
@@ -316,7 +309,7 @@ export default function ServicesPage() {
           </Reveal>
 
           <div className="space-y-8 sm:space-y-12">
-            {SERVICES.map((service, i) => (
+            {SERVICES.map((service) => (
               <Reveal key={service.id} delay={0.05}>
                 <div
                   id={service.id}

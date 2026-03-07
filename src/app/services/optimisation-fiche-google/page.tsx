@@ -15,7 +15,7 @@ import {
   Lightbulb,
   Trophy,
 } from '@phosphor-icons/react';
-import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
+import FreehandIcon from '@/components/FreehandIcon';
 
 const CLIENT_LOGOS = [
   { name: 'Brand 05', logo: '/logos/brand-logo-05.svg' },

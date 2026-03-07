@@ -14,7 +14,7 @@ import {
   RiPhoneFill,
   RiArrowDownSLine,
 } from 'react-icons/ri';
-import FreehandIcon, { type FreehandIconName } from '@/components/FreehandIcon';
+import FreehandIcon from '@/components/FreehandIcon';
 import PlaceSearchInput from '@/components/audit/PlaceSearchInput';
 import { PlaceResult } from '@/lib/types';
 import { City } from '@/lib/cities';
