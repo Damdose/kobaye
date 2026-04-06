@@ -86,7 +86,7 @@ export default function Header() {
       )}
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-18 sm:px-6">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/logo.svg" alt="Siva" className="h-7" />
+          <img src="/logo.svg" alt="Kobaye" className="h-10" />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">

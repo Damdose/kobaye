@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="inline-block">
-              <img src="/logo-white.svg" alt="Siva" className="h-8 w-auto" />
+              <img src="/logo.svg" alt="Kobaye" className="h-10 w-auto brightness-0 invert" />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-white/50">
               Nous organisons des expériences clients réelles pour générer de la preuve sociale authentique.
