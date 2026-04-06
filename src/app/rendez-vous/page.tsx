@@ -18,30 +18,30 @@ import { motion, useInView } from 'framer-motion';
 const TESTIMONIALS = [
   {
     name: 'Marie L.',
-    role: 'Directrice de boulangerie',
+    role: 'Fondatrice de formation en ligne',
     avatar: 'https://i.pravatar.cc/80?img=47',
-    text: 'En 30 minutes, Damien a mis le doigt sur exactement pourquoi mes concurrents m\'apparaissaient avant moi. Le plan d\'action était clair et actionnable dès le lendemain.',
+    text: 'En 2 semaines, on est passé de 4 à 27 avis Google. Notre taux de conversion a augmenté de 35%. On regrette de ne pas l\'avoir fait plus tôt.',
     stars: 5,
   },
   {
     name: 'Thomas G.',
-    role: 'Gérant en plomberie',
+    role: 'CEO de SaaS',
     avatar: 'https://i.pravatar.cc/80?img=12',
-    text: 'Je ne savais même pas que ma fiche Google avait autant de lacunes. Après l\'audit, j\'ai mis en place les recommandations et mes appels entrants ont doublé en 6 semaines.',
+    text: 'Le concept est brillant : de vrais utilisateurs qui testent et donnent leur avis honnête. Les retours privés nous ont aussi beaucoup aidé à améliorer notre produit.',
     stars: 5,
   },
   {
     name: 'Sophie M.',
-    role: 'Fondatrice d\'institut de beauté',
+    role: 'Coach en développement personnel',
     avatar: 'https://i.pravatar.cc/80?img=44',
-    text: 'Un audit vraiment sérieux et sans blabla commercial. La heatmap m\'a montré visuellement les zones où je n\'existais pas. Très utile et 100% gratuit comme promis.',
+    text: 'Zéro avis pendant 6 mois, personne ne me faisait confiance. Après une opération, 42 avis authentiques et mon agenda est plein. Le système fonctionne.',
     stars: 5,
   },
   {
     name: 'David R.',
-    role: 'Gérant d\'entreprise de déménagement',
+    role: 'Fondateur e-commerce',
     avatar: 'https://i.pravatar.cc/80?img=33',
-    text: 'Ce qui m\'a convaincu c\'est la transparence : on m\'a montré exactement où j\'étais et où étaient mes concurrents sur la carte. Maintenant je sais sur quoi concentrer mes efforts.',
+    text: 'Ce qui m\'a convaincu c\'est la transparence totale du programme. Les avis sont vrais, les testeurs utilisent vraiment le produit. Nos ventes ont augmenté de 40%.',
     stars: 5,
   },
 ];
@@ -97,33 +97,32 @@ export default function RendezVousPage() {
                 <Reveal>
                   <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent-light px-4 py-2 text-sm font-semibold text-accent-dark">
                     <RiGiftFill className="h-4 w-4" />
-                    Audit 100% gratuit · Sans engagement
+                    Programme pionnier · Places limitées
                   </div>
                 </Reveal>
 
                 <Reveal delay={0.06}>
                   <h1 className="text-heading-xl text-warm-900 sm:text-display">
-                    Découvrez pourquoi vos concurrents vous{' '}
-                    <span className="serif-accent">dépassent</span> sur Google Maps.
+                    Obtenez des avis positifs authentiques grâce à de vraies{' '}
+                    <span className="serif-accent">expériences clients.</span>
                   </h1>
                 </Reveal>
 
                 <Reveal delay={0.12}>
                   <p className="mt-5 text-body-sm sm:text-body-lg text-warm-600">
-                    Réservez 30 minutes avec un expert SEO local. On analyse votre visibilité,
-                    on identifie vos opportunités et on vous livre un plan d&apos;action concret
-                    — gratuitement.
+                    Réservez 15 minutes avec notre équipe. On analyse votre besoin en preuve sociale,
+                    on vous recommande le bon pack et on configure votre première opération ensemble.
                   </p>
                 </Reveal>
 
                 <Reveal delay={0.18}>
                   <div className="mt-8 space-y-3">
                     {[
-                      'Analyse complète de votre fiche Google',
-                      'Heatmap de vos positions par zone',
-                      'Benchmark de vos 3 concurrents directs',
-                      'Recommandations personnalisées & priorisées',
-                      'Estimation du trafic que vous perdez',
+                      'Analyse de votre besoin en preuve sociale',
+                      'Recommandation du pack adapté à vos enjeux',
+                      'Configuration de votre première opération',
+                      'Définition du profil testeur idéal',
+                      'Estimation des résultats attendus',
                     ].map((item) => (
                       <div key={item} className="flex items-start gap-3">
                         <RiCheckboxCircleFill className="mt-0.5 h-5 w-5 shrink-0 text-positive" />
@@ -137,17 +136,17 @@ export default function RendezVousPage() {
                   <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-warm-500">
                     <span className="inline-flex items-center gap-1.5">
                       <RiTimeLine className="h-4 w-4 text-warm-400" />
-                      30 min
+                      15 min
                     </span>
                     <span className="h-1 w-1 rounded-full bg-warm-300" />
                     <span className="inline-flex items-center gap-1.5">
                       <RiShieldCheckFill className="h-4 w-4 text-warm-400" />
-                      Zéro engagement
+                      Sans engagement
                     </span>
                     <span className="h-1 w-1 rounded-full bg-warm-300" />
                     <span className="inline-flex items-center gap-1.5">
                       <RiFlashlightFill className="h-4 w-4 text-warm-400" />
-                      En visio ou téléphone
+                      Résultats sous 14 jours
                     </span>
                   </div>
                 </Reveal>
@@ -180,7 +179,7 @@ export default function RendezVousPage() {
                         <span className="ml-1 text-sm font-semibold text-warm-800">4.9/5</span>
                       </div>
                       <p className="text-xs text-warm-500">
-                        +1 000 entreprises ont déjà fait leur audit
+                        Nos clients recommandent Siva
                       </p>
                     </div>
                   </div>
@@ -196,7 +195,7 @@ export default function RendezVousPage() {
                         <RiCalendarScheduleFill className="h-5 w-5" />
                       </div>
                       <div>
-                        <p className="font-semibold text-warm-900">Appel audit gratuit</p>
+                        <p className="font-semibold text-warm-900">Appel découverte</p>
                         <p className="text-sm text-warm-500">Choisissez le créneau qui vous arrange</p>
                       </div>
                     </div>

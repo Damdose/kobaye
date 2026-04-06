@@ -1,21 +1,20 @@
 import Link from 'next/link';
-import { CITIES } from '@/lib/cities';
 const CONTACT_PHONE = '+33 7 60 55 40 00';
 const CONTACT_PHONE_LINK = 'tel:+33760554000';
 
 const SERVICE_LINKS = [
-  { href: '/services/audit-gratuit', label: 'Audit Gratuit' },
-  { href: '/services/optimisation-fiche-google', label: 'Optimisation Fiche Google' },
-  { href: '/services/boost-avis-experience', label: 'Boost Avis Expérience' },
+  { href: '/comment-ca-marche', label: 'Comment ça marche' },
+  { href: '/services', label: 'Tarifs & opérations' },
+  { href: '/ambassadeur', label: 'Devenir testeur' },
+  { href: '/asso', label: 'Associations' },
 ];
 
 const NAV_LINKS = [
-  { href: '/services', label: 'Nos services' },
   { href: '/faq', label: 'FAQ' },
   { href: '/blog', label: 'Blog' },
   { href: '/glossaire', label: 'Glossaire' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/rendez-vous', label: 'Prendre rendez-vous' },
+  { href: '/rendez-vous', label: 'Lancer une opération' },
+  { href: '/connexion', label: 'Connexion' },
 ];
 
 const LEGAL_LINKS = [
@@ -35,7 +34,7 @@ export default function Footer() {
               <img src="/logo-white.svg" alt="Siva" className="h-8 w-auto" />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-white/50">
-              Agence SEO locale Google Maps. On propulse votre business dans le top de Google Maps.
+              Nous organisons des expériences clients réelles pour générer de la preuve sociale authentique.
             </p>
             <div className="mt-4 flex items-center gap-3">
               <a
@@ -61,7 +60,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-white/40">Services</p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-white/40">Plateforme</p>
             <ul className="space-y-2.5">
               {SERVICE_LINKS.map((link) => (
                 <li key={link.href}>
@@ -103,7 +102,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/rendez-vous" className="text-sm text-white/60 transition-colors hover:text-white">
-                  Prendre rendez-vous
+                  Lancer une opération
                 </Link>
               </li>
             </ul>
@@ -124,18 +123,17 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Présence nationale */}
+        {/* Niches */}
         <div className="mt-8 border-t border-white/10 pt-6 sm:mt-10 sm:pt-8">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-white/40">Présents dans toute la France</p>
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.15em] text-white/40">Pour tous les secteurs</p>
           <div className="flex flex-wrap gap-x-4 gap-y-1.5">
-            {CITIES.map((city) => (
-              <Link
-                key={city.slug}
-                href={`/agence-seo-local/${city.slug}`}
-                className="text-sm text-white/50 transition-colors hover:text-white"
+            {['Formations en ligne', 'SaaS & Apps', 'E-commerce DTC', 'Coachs & Prestataires', 'Lancement d\'activité', 'Services digitaux'].map((niche) => (
+              <span
+                key={niche}
+                className="text-sm text-white/50"
               >
-                {city.name}
-              </Link>
+                {niche}
+              </span>
             ))}
           </div>
         </div>

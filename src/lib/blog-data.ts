@@ -26,25 +26,25 @@ export interface BlogPost {
   sections: BlogSection[];
 }
 
-export const CATEGORIES = ['Tous', 'Guide', 'Éducation', 'Stratégie', 'SEO Local', 'Business'] as const;
+export const CATEGORIES = ['Tous', 'Guide', 'Éducation', 'Stratégie', 'Réputation', 'Business'] as const;
 
 export type Category = (typeof CATEGORIES)[number];
 
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'optimiser-fiche-google-business',
-    title: 'Comment optimiser votre fiche Google Business Profile en 2026',
+    title: 'Comment maximiser votre preuve sociale avec des avis authentiques',
     excerpt:
-      'Les 10 étapes essentielles pour transformer votre fiche Google en machine à générer des clients. Guide complet avec exemples concrets.',
+      'Les 10 étapes essentielles pour construire une réputation en ligne solide grâce à de vraies expériences clients. Guide complet avec exemples concrets.',
     metaDescription:
-      'Guide complet 2026 pour optimiser votre fiche Google Business Profile : catégories, photos, avis, posts, FAQ. 10 étapes concrètes pour dominer le Local Pack.',
+      'Guide complet 2026 pour construire votre preuve sociale : avis authentiques, programmes de test, transparence. 10 étapes concrètes pour booster votre réputation.',
     category: 'Guide',
-    tags: ['Google Business Profile', 'Optimisation', 'Fiche Google', 'Local Pack', 'SEO Local'],
+    tags: ['Preuve sociale', 'Avis authentiques', 'Réputation', 'Test produit', 'Crédibilité'],
     readTime: '8 min',
     readTimeMinutes: 8,
     date: '28 février 2026',
     dateISO: '2026-02-28',
-    author: { name: 'Damien T.', role: 'Fondateur & Expert SEO Local', avatar: '/logo.svg' },
+    author: { name: 'Damien T.', role: 'Fondateur', avatar: '/logo.svg' },
     coverImage: '/blog/blog-optimiser-fiche-google.png',
     sections: [
       {
@@ -186,18 +186,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'seo-local-vs-seo-classique',
-    title: 'SEO local vs SEO classique : quelles différences pour votre business ?',
+    title: 'Faux avis vs avis authentiques : pourquoi la transparence gagne toujours',
     excerpt:
-      'Comprendre les mécanismes du référencement local et pourquoi il est devenu incontournable pour les commerces de proximité.',
+      'Comprendre pourquoi les programmes de test transparents surpassent les faux avis et comment le biais de réciprocité crée naturellement de la preuve sociale positive.',
     metaDescription:
-      'SEO local vs SEO classique : découvrez les différences fondamentales, les facteurs de ranking spécifiques et pourquoi le SEO local est essentiel pour les commerces.',
+      'Faux avis vs avis authentiques : découvrez pourquoi les programmes de test produit transparents sont plus efficaces et conformes que les faux avis.',
     category: 'Éducation',
-    tags: ['SEO Local', 'SEO Classique', 'Référencement', 'Google Maps', 'Commerces'],
+    tags: ['Avis authentiques', 'Transparence', 'Faux avis', 'Preuve sociale', 'Confiance'],
     readTime: '6 min',
     readTimeMinutes: 6,
     date: '21 février 2026',
     dateISO: '2026-02-21',
-    author: { name: 'Damien T.', role: 'Fondateur & Expert SEO Local', avatar: '/logo.svg' },
+    author: { name: 'Damien T.', role: 'Fondateur', avatar: '/logo.svg' },
     coverImage: '/blog/blog-seo-local-vs-classique.png',
     sections: [
       {
@@ -274,18 +274,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'avis-google-strategie',
-    title: 'Stratégie avis Google : comment passer de 20 à 200 avis en 6 mois',
+    title: 'Comment passer de 0 à 50 avis authentiques en 30 jours',
     excerpt:
-      'Les techniques éprouvées pour collecter des avis authentiques et booster votre visibilité locale de manière éthique.',
+      'Les techniques éprouvées pour générer des avis authentiques grâce aux opérations de test. Stratégie complète pour résoudre le problème du cold start.',
     metaDescription:
-      'Découvrez comment passer de 20 à 200 avis Google en 6 mois avec des techniques éthiques. Stratégie complète : collecte, réponses, et impact sur le SEO local.',
+      'Découvrez comment passer de 0 à 50 avis authentiques en 30 jours avec des opérations de test. Stratégie complète pour construire votre preuve sociale.',
     category: 'Stratégie',
-    tags: ['Avis Google', 'Réputation', 'E-réputation', 'SEO Local', 'Clients'],
+    tags: ['Avis authentiques', 'Réputation', 'Cold start', 'Test produit', 'Preuve sociale'],
     readTime: '7 min',
     readTimeMinutes: 7,
     date: '14 février 2026',
     dateISO: '2026-02-14',
-    author: { name: 'Damien T.', role: 'Fondateur & Expert SEO Local', avatar: '/logo.svg' },
+    author: { name: 'Damien T.', role: 'Fondateur', avatar: '/logo.svg' },
     coverImage: '/blog/blog-avis-google-strategie.png',
     sections: [
       {
@@ -390,18 +390,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'google-maps-pack-local',
-    title: 'Google Maps Local Pack : comment atteindre le top 3',
+    title: 'Le biais de réciprocité : le moteur invisible de la preuve sociale',
     excerpt:
-      "Décryptage des facteurs de ranking du Local Pack et plan d'action pour y apparaître sur vos mots-clés stratégiques.",
+      "Comprendre pourquoi offrir une expérience gratuite génère naturellement des retours positifs, et comment en tirer parti de manière éthique.",
     metaDescription:
-      'Guide complet pour apparaître dans le Local Pack Google Maps. Facteurs de ranking, stratégie pas à pas et outils pour atteindre le top 3 local.',
-    category: 'SEO Local',
-    tags: ['Local Pack', 'Google Maps', 'Top 3', 'Ranking Local', 'Visibilité'],
+      'Le biais de réciprocité expliqué : pourquoi les programmes de test produit génèrent naturellement des avis positifs sans manipulation.',
+    category: 'Réputation',
+    tags: ['Biais de réciprocité', 'Psychologie', 'Preuve sociale', 'Avis positifs', 'Éthique'],
     readTime: '10 min',
     readTimeMinutes: 10,
     date: '7 février 2026',
     dateISO: '2026-02-07',
-    author: { name: 'Damien T.', role: 'Fondateur & Expert SEO Local', avatar: '/logo.svg' },
+    author: { name: 'Damien T.', role: 'Fondateur', avatar: '/logo.svg' },
     coverImage: '/blog/blog-google-maps-local-pack.png',
     sections: [
       {
@@ -486,18 +486,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'erreurs-fiche-google',
-    title: 'Les 7 erreurs qui ruinent votre fiche Google (et comment les corriger)',
+    title: 'Les 7 erreurs qui tuent votre crédibilité en ligne (et comment les corriger)',
     excerpt:
-      'Catégories mal choisies, horaires incorrects, photos absentes… Identifiez et corrigez les erreurs qui vous coûtent des clients.',
+      'Pas assez d\'avis, avis trop anciens, aucun système de collecte... Identifiez et corrigez les erreurs qui vous coûtent des clients.',
     metaDescription:
-      'Découvrez les 7 erreurs les plus courantes sur les fiches Google Business Profile et comment les corriger immédiatement pour récupérer des clients perdus.',
+      'Découvrez les 7 erreurs de réputation en ligne les plus courantes et comment les corriger pour récupérer la confiance de vos prospects.',
     category: 'Guide',
-    tags: ['Erreurs GBP', 'Fiche Google', 'Optimisation', 'Correction', 'Visibilité'],
+    tags: ['Crédibilité', 'Réputation', 'Avis en ligne', 'Erreurs', 'Confiance'],
     readTime: '5 min',
     readTimeMinutes: 5,
     date: '31 janvier 2026',
     dateISO: '2026-01-31',
-    author: { name: 'Damien T.', role: 'Fondateur & Expert SEO Local', avatar: '/logo.svg' },
+    author: { name: 'Damien T.', role: 'Fondateur', avatar: '/logo.svg' },
     coverImage: '/blog/blog-erreurs-fiche-google.png',
     sections: [
       {
@@ -594,18 +594,18 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'roi-seo-local',
-    title: "ROI du SEO local : combien rapporte vraiment l'investissement ?",
+    title: "ROI de la preuve sociale : combien rapportent vraiment les avis clients ?",
     excerpt:
-      'Chiffres réels, études de cas et méthode de calcul pour évaluer le retour sur investissement de votre stratégie SEO locale.',
+      'Chiffres réels, études de cas et méthode de calcul pour évaluer le retour sur investissement de votre stratégie de preuve sociale.',
     metaDescription:
-      'Calculez le ROI réel du SEO local avec notre méthode et nos chiffres concrets. Études de cas, formules et comparaison avec les autres canaux marketing.',
+      'Calculez le ROI réel de la preuve sociale avec notre méthode. Études de cas, impact des avis sur la conversion et comparaison avec les autres leviers.',
     category: 'Business',
-    tags: ['ROI', 'Investissement', 'Business', 'Rentabilité', 'SEO Local'],
+    tags: ['ROI', 'Investissement', 'Business', 'Rentabilité', 'Preuve sociale'],
     readTime: '9 min',
     readTimeMinutes: 9,
     date: '24 janvier 2026',
     dateISO: '2026-01-24',
-    author: { name: 'Damien T.', role: 'Fondateur & Expert SEO Local', avatar: '/logo.svg' },
+    author: { name: 'Damien T.', role: 'Fondateur', avatar: '/logo.svg' },
     coverImage: '/blog/blog-roi-seo-local.png',
     sections: [
       {

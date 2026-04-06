@@ -13,126 +13,95 @@ import FreehandIcon from '@/components/FreehandIcon';
 
 const SERVICES = [
   {
-    id: 'audit-gratuit',
+    id: 'lancement',
     icon: 'chart-bar' as const,
-    tag: 'Gratuit',
-    title: 'Audit Gratuit',
-    headline: 'Découvrez où vous en êtes sur Google Maps.',
+    tag: 'Lancement',
+    title: '50 testeurs',
+    headline: 'Lancez une dynamique d\'avis et renforcez votre crédibilité.',
     description:
-      'En 30 secondes, obtenez un diagnostic complet de votre visibilité locale : score d\'optimisation, positions sur la carte, analyse concurrentielle et recommandations IA personnalisées.',
-    price: 'Gratuit',
-    priceSuffix: '',
+      'Idéal pour démarrer. 50 testeurs qualifiés testent votre produit ou service et partagent leur retour honnête. 29€ par testeur.',
+    price: '1 450€',
+    priceSuffix: '· 29€/testeur',
     features: [
-      'Score d\'optimisation sur 100',
-      'Heatmap de vos positions locales',
-      'Analyse de vos 3 concurrents principaux',
-      'Recommandations IA personnalisées',
-      'Estimation de revenus manqués',
-      'Analyse de visibilité IA (ChatGPT, Gemini)',
+      '50 testeurs qualifiés',
+      'Avis authentiques et positifs',
+      'Feedback structuré de chaque testeur',
+      'Dashboard de suivi en temps réel',
+      'Avis publiés sur Google, Trustpilot ou marketplace',
+      'Mention de transparence sur chaque avis',
     ],
     stats: [
-      { value: '30s', label: 'Pour obtenir votre rapport' },
-      { value: '15+', label: 'Métriques analysées' },
-      { value: '3', label: 'Concurrents identifiés' },
+      { value: '50', label: 'Testeurs qualifiés' },
+      { value: '29€', label: 'Par testeur' },
+      { value: '7-14j', label: 'Premiers avis' },
     ],
-    cta: 'Lancer l\'audit',
-    ctaHref: '/audit-gratuit',
-    detailHref: '/services/audit-gratuit',
+    cta: 'Choisir ce programme',
+    ctaHref: '/rendez-vous',
+    detailHref: '/rendez-vous',
     highlighted: false,
-    badge: '100% gratuit',
+    badge: null,
     accentColor: 'bg-positive/10 text-positive',
     accentBorder: 'border-positive/20',
   },
   {
-    id: 'optimisation-fiche-google',
-    icon: 'pencil' as const,
-    tag: 'One-shot · 500€',
-    title: 'Optimisation Fiche Google',
-    headline: 'Une fiche qui convertit les recherches en clients.',
+    id: 'growth',
+    icon: 'check-badge' as const,
+    tag: 'Recommandé',
+    title: '100 testeurs',
+    headline: 'Accélération de la social proof et stabilisation de votre note.',
     description:
-      'On passe votre fiche Google au peigne fin et on optimise chaque détail : catégories, description SEO, photos, Q&A, posts. Livrée en 5 jours avec un rapport complet.',
-    price: '500€',
-    priceSuffix: '',
+      'Le pack le plus populaire. 100 testeurs avec matching avancé, rapport consolidé et support prioritaire. 24,5€ par testeur.',
+    price: '2 450€',
+    priceSuffix: '· 24,5€/testeur',
     features: [
-      'Audit complet de la fiche existante',
-      'Optimisation catégories, attributs, description SEO',
-      'Upload et structuration des photos',
-      'Setup Q&A, produits/services, horaires',
-      'Publication des premiers posts Google',
-      'Cohérence NAP sur les annuaires principaux',
+      '100 testeurs qualifiés',
+      'Avis authentiques et positifs',
+      'Matching avancé des profils testeurs',
+      'Rapport consolidé des retours',
+      'Support prioritaire',
+      'Suivi des avis publiés en temps réel',
     ],
     stats: [
-      { value: '92/100', label: 'Score moyen post-opti' },
-      { value: '5 jours', label: 'Délai de livraison' },
-      { value: '+70%', label: 'de visibilité en moy.' },
+      { value: '100', label: 'Testeurs qualifiés' },
+      { value: '24,5€', label: 'Par testeur' },
+      { value: '7-14j', label: 'Premiers avis' },
     ],
-    cta: 'Prendre rendez-vous',
+    cta: 'Choisir ce programme',
     ctaHref: '/rendez-vous',
-    detailHref: '/services/optimisation-fiche-google',
+    detailHref: '/rendez-vous',
     highlighted: true,
     badge: 'Populaire',
     accentColor: 'bg-accent/10 text-accent-dark',
     accentBorder: 'border-accent/20',
   },
   {
-    id: 'boost-avis-experience',
-    icon: 'check-badge' as const,
-    tag: 'Sur devis',
-    title: 'Boost Avis Expérience',
-    headline: 'De vrais clients, de vrais avis Google.',
-    description:
-      'Des étudiants sélectionnés visitent votre établissement, vivent une expérience réelle et laissent un avis Google authentique et détaillé. 100% conforme aux CGU.',
-    price: 'Sur devis',
-    priceSuffix: '',
-    features: [
-      'Des étudiants visitent votre établissement',
-      'Expérience réelle (repas, soin, service…)',
-      'Avis Google authentique et détaillé',
-      '100% conforme aux CGU Google',
-      'Suivi et reporting des avis publiés',
-      'Accompagnement pour répondre aux avis',
-    ],
-    stats: [
-      { value: '+0.4', label: 'de note moyenne / mois' },
-      { value: '24+', label: 'Avis publiés / mois' },
-      { value: '100%', label: 'Conforme CGU Google' },
-    ],
-    cta: 'Candidater',
-    ctaHref: '/rendez-vous',
-    detailHref: '/services/boost-avis-experience',
-    highlighted: false,
-    badge: 'Candidature requise',
-    accentColor: 'bg-warm-100 text-warm-700',
-    accentBorder: 'border-warm-200',
-  },
-  {
-    id: 'google-ads-local',
+    id: 'scale',
     icon: 'megaphone' as const,
-    tag: 'Dès 400€/mois',
-    title: 'Google Ads Local',
-    headline: 'Des appels qualifiés, pas juste des clics.',
+    tag: 'Volume',
+    title: '200 testeurs',
+    headline: 'Effet volume fort : domination et crédibilité maximale.',
     description:
-      'On gère vos campagnes Search locales et vos Local Service Ads pour transformer chaque euro de budget pub en clients réels. Reporting mensuel transparent.',
-    price: '400€',
-    priceSuffix: '/mois + budget pub',
+      '200 testeurs avec accompagnement stratégique dédié, relance automatique et account manager personnel. À partir de 22€ par testeur.',
+    price: '4 650€',
+    priceSuffix: '· 100×24,5€ + 100×22€',
     features: [
-      'Création et gestion des campagnes Search local',
-      'Setup Local Service Ads (LSA) si éligible',
-      'Tracking appels, formulaires, visites',
-      'Reporting mensuel coût par lead',
-      'Optimisation continue enchères et ciblage',
-      'Call de suivi mensuel avec votre account manager',
+      '200 testeurs qualifiés',
+      'Avis authentiques et positifs',
+      'Accompagnement stratégique dédié',
+      'Relance testeurs automatique',
+      'Account manager personnel',
+      'Reporting avancé et recommandations',
     ],
     stats: [
-      { value: '4,20€', label: 'CPL moyen' },
-      { value: '3,2x', label: 'ROI moyen à 90 jours' },
-      { value: '96%', label: 'De clients reconduits' },
+      { value: '200', label: 'Testeurs qualifiés' },
+      { value: '~23€', label: 'Par testeur' },
+      { value: 'Dédié', label: 'Account manager' },
     ],
-    cta: 'Prendre rendez-vous',
+    cta: 'Choisir ce programme',
     ctaHref: '/rendez-vous',
-    detailHref: '/services/google-ads-local',
+    detailHref: '/rendez-vous',
     highlighted: false,
-    badge: null,
+    badge: 'Meilleur rapport',
     accentColor: 'bg-warm-100 text-warm-700',
     accentBorder: 'border-warm-200',
   },
@@ -141,74 +110,74 @@ const SERVICES = [
 const VALUE_PROPS = [
   {
     icon: 'target' as const,
-    title: 'Reflétez votre ambition locale',
+    title: 'Plus de crédibilité',
     description:
-      'Démarquez-vous de la concurrence et affirmez votre présence avec une fiche Google optimisée à la hauteur de votre business.',
+      'Des avis authentiques de vrais utilisateurs. Chaque avis mentionne la transparence du programme. C\'est légal, éthique, et puissant.',
   },
   {
     icon: 'trend-up' as const,
-    title: 'Boostez votre trafic local',
+    title: 'Plus de visibilité',
     description:
-      'Placez votre fiche en pole position sur Google Maps grâce à notre expertise SEO local. On ne laisse rien au hasard.',
+      'Plus d\'avis = meilleur référencement, meilleur taux de clic, meilleur taux de conversion. Google récompense les entreprises avec des avis récents et réguliers.',
   },
   {
     icon: 'users' as const,
-    title: 'Transformez votre trafic en clients',
+    title: 'Plus de clients',
     description:
-      'Faites de chaque recherche locale une opportunité. Votre fiche est conçue pour convertir les recherches en appels et visites.',
+      'Chaque avis positif est un vendeur silencieux qui travaille 24h/24. Vous passez devant vos concurrents dans les comparaisons.',
   },
   {
     icon: 'shield' as const,
-    title: 'Mesurez vos résultats',
+    title: 'Transparent & légal',
     description:
-      'Un reporting clair, des KPI lisibles, et des arbitrages orientés business au lieu de vanity metrics.',
+      'Conforme aux règles Google, Trustpilot et au droit français. Le même mécanisme que les programmes Amazon Vine.',
   },
   {
     icon: 'chat' as const,
-    title: 'Construisez votre réputation',
+    title: 'Feedback produit actionnable',
     description:
-      'Mise en place d\'un système continu pour collecter plus d\'avis qualifiés et augmenter le taux de conversion.',
+      'Les retours privés des testeurs insatisfaits sont structurés et exploitables. Améliorez votre offre grâce à de vrais retours terrain.',
   },
   {
     icon: 'lightning' as const,
-    title: 'Reprenez le contrôle',
+    title: 'Résultats rapides',
     description:
-      'Déployez votre stratégie locale librement grâce à notre accompagnement et un tableau de bord en temps réel.',
+      'Les premiers avis sont publiés sous 7 à 14 jours. Sans engagement, satisfait ou re-testé.',
   },
 ];
 
 const JOURNEY_STEPS = [
   {
     num: '01',
-    icon: 'chart-bar' as const,
-    title: 'Diagnostic',
-    description: 'Lancez un audit gratuit pour comprendre votre situation actuelle sur Google Maps.',
-    service: 'Audit Gratuit',
-    href: '#audit-gratuit',
+    icon: 'pencil' as const,
+    title: 'Créez votre opération',
+    description: 'Définissez ce que vous offrez aux testeurs et le profil idéal de vos testeurs.',
+    service: 'Configuration',
+    href: '#growth',
   },
   {
     num: '02',
-    icon: 'pencil' as const,
-    title: 'Optimisation',
-    description: 'On optimise votre fiche Google pour qu\'elle convertisse les recherches en clients.',
-    service: 'Optimisation Fiche',
-    href: '#optimisation-fiche-google',
+    icon: 'users' as const,
+    title: 'On active les testeurs',
+    description: 'Notre plateforme matche votre offre avec des testeurs qualifiés de notre communauté.',
+    service: 'Matching',
+    href: '#growth',
   },
   {
     num: '03',
     icon: 'check-badge' as const,
-    title: 'Réputation',
-    description: 'Des vrais clients visitent votre établissement et laissent des avis authentiques.',
-    service: 'Boost Avis',
-    href: '#boost-avis-experience',
+    title: 'Ils testent pour de vrai',
+    description: 'Les testeurs utilisent réellement votre produit ou service. Pas de simulation.',
+    service: 'Expérience',
+    href: '#growth',
   },
   {
     num: '04',
-    icon: 'megaphone' as const,
-    title: 'Acquisition',
-    description: 'Des campagnes Ads locales qui génèrent des appels et des visites qualifiés.',
-    service: 'Google Ads Local',
-    href: '#google-ads-local',
+    icon: 'star' as const,
+    title: 'Les avis tombent',
+    description: 'Les satisfaits laissent un avis public. Les insatisfaits font un retour privé constructif.',
+    service: 'Résultats',
+    href: '#growth',
   },
 ];
 
@@ -229,54 +198,54 @@ const CLIENT_LOGOS = [
 const TESTIMONIALS_SERVICES = [
   {
     name: 'Sophie M.',
-    role: 'Gérante de restaurant',
-    company: 'Paris 11e',
+    role: 'Fondatrice de formation en ligne',
+    company: 'Paris',
     avatar: '👩🏻',
-    text: 'Depuis l\'optimisation de notre fiche Google, on reçoit 3x plus d\'appels. Les clients nous trouvent facilement et les avis ont boosté notre crédibilité.',
+    text: 'En 2 semaines, on est passé de 4 à 27 avis Google. Notre taux de conversion a augmenté de 35%. On regrette de ne pas l\'avoir fait plus tôt.',
     rating: 5,
   },
   {
     name: 'Thomas R.',
-    role: 'Directeur d\'hôtel',
-    company: 'Marseille',
+    role: 'CEO de SaaS',
+    company: 'Lyon',
     avatar: '👨🏽',
-    text: 'L\'audit gratuit nous a ouvert les yeux sur tout ce qu\'on ratait. En 2 semaines après l\'optimisation, notre fiche est passée de la page 2 à la 1ère position.',
+    text: 'Le concept est brillant. Nos testeurs ont vraiment utilisé l\'app et les retours privés nous ont permis de corriger 3 bugs critiques avant le lancement.',
     rating: 5,
   },
   {
     name: 'Nadia K.',
-    role: 'Fondatrice de studio bien-être',
-    company: 'Lyon',
+    role: 'Coach en développement personnel',
+    company: 'Bordeaux',
     avatar: '👩🏾',
-    text: 'Le programme Boost Avis a transformé notre réputation en ligne. On est passé de 3.8 à 4.6 étoiles en 3 mois. Les nouveaux clients citent nos avis Google.',
+    text: 'Zéro avis en ligne pendant 6 mois, personne ne me faisait confiance. Après une opération Scale, 42 avis authentiques et mon agenda est plein.',
     rating: 5,
   },
 ];
 
 const FAQ_ITEMS_SERVICES = [
   {
-    q: 'Combien de temps faut-il pour voir des résultats ?',
-    a: 'L\'audit est instantané (30 secondes). L\'optimisation de fiche Google est livrée en 5 jours avec des premiers résultats visibles sous 1 à 2 semaines. Pour le Boost Avis, les premiers avis sont publiés dès le 1er mois. Les campagnes Ads génèrent des leads dès la première semaine.',
+    q: 'Combien de temps faut-il pour voir les premiers avis ?',
+    a: 'En moyenne, les premiers avis sont publiés sous 7 à 14 jours après le lancement de l\'opération. Le rythme dépend du nombre de testeurs activés et du type de produit/service.',
   },
   {
-    q: 'Est-ce que l\'audit gratuit est vraiment sans engagement ?',
-    a: 'Oui, 100% gratuit et sans engagement. Vous recevez un rapport complet avec votre score d\'optimisation, vos positions sur Google Maps, une analyse concurrentielle et des recommandations personnalisées. Aucune carte bancaire n\'est demandée.',
+    q: 'Est-ce que les avis sont de vrais avis ?',
+    a: 'Oui. Les testeurs utilisent réellement votre produit. Leur retour est libre et honnête. Nous ne demandons jamais de note minimale. Chaque avis mentionne que le test a été réalisé via notre programme — transparence totale.',
   },
   {
-    q: 'Les avis du programme Boost sont-ils conformes aux CGU Google ?',
-    a: 'Absolument. Nos ambassadeurs visitent réellement votre établissement, vivent une expérience authentique et rédigent un avis honnête et détaillé. C\'est 100% conforme aux conditions d\'utilisation de Google.',
+    q: 'Est-ce légal ?',
+    a: 'Oui. Notre modèle repose sur la transparence : chaque avis identifie le cadre du test. C\'est le même principe que les programmes Amazon Vine. Conforme aux règles Google, Trustpilot, et au droit français de la consommation.',
   },
   {
-    q: 'Puis-je combiner plusieurs services ?',
-    a: 'Oui, et c\'est même recommandé. La plupart de nos clients commencent par l\'audit gratuit, enchaînent avec l\'optimisation de fiche, puis activent le Boost Avis ou les Google Ads selon leurs objectifs. Chaque offre s\'intègre dans une stratégie cohérente.',
+    q: 'Et si les testeurs laissent des avis négatifs ?',
+    a: 'Les testeurs insatisfaits sont orientés vers un feedback privé constructif sur notre plateforme. Ils ne sont pas empêchés de publier un avis, mais le design du parcours canalise naturellement les retours négatifs en privé.',
   },
   {
     q: 'Y a-t-il un engagement de durée ?',
-    a: 'L\'audit est sans engagement. L\'optimisation fiche est un one-shot (pas d\'abonnement). Le Boost Avis fonctionne sur candidature avec une période de test. Les Google Ads sont sans engagement, vous pouvez arrêter à tout moment.',
+    a: 'Non. Chaque opération est un achat ponctuel, sans abonnement ni engagement. Vous lancez une opération quand vous en avez besoin. Satisfait ou re-testé.',
   },
   {
-    q: 'Comment mesurez-vous les résultats ?',
-    a: 'Chaque service inclut un reporting clair : score d\'optimisation avant/après, évolution des positions sur Google Maps, nombre d\'avis publiés, coût par lead pour les Ads. On suit des KPI business, pas des vanity metrics.',
+    q: 'Comment sont sélectionnés les testeurs ?',
+    a: 'Chaque testeur a un profil vérifié sur la plateforme. Vous pouvez définir des critères (localisation, centres d\'intérêt, profil socio-démo) pour cibler les bons profils.',
   },
 ];
 
@@ -401,20 +370,19 @@ export default function ServicesPage() {
     <main>
       {/* ── 1. Hero ── */}
       <section className="relative overflow-hidden px-4 sm:px-6 pb-6 sm:pb-8 pt-10 sm:pt-16 md:pt-20">
-        <Sticker className="absolute left-[4%] top-[12%] text-4xl sm:text-5xl md:text-6xl lg:text-7xl hidden sm:inline-block" rotate={-12} floatDuration={3.2} floatStyle="float">🗺️</Sticker>
+        <Sticker className="absolute left-[4%] top-[12%] text-4xl sm:text-5xl md:text-6xl lg:text-7xl hidden sm:inline-block" rotate={-12} floatDuration={3.2} floatStyle="float">💬</Sticker>
         <Sticker className="absolute right-[5%] top-[8%] text-4xl sm:text-5xl md:text-6xl lg:text-7xl hidden sm:inline-block" rotate={8} floatDuration={2.8} floatStyle="pulse">⭐</Sticker>
         <Sticker className="absolute right-[8%] bottom-[10%] text-4xl sm:text-5xl md:text-6xl lg:text-7xl hidden sm:inline-block" rotate={-8} floatDuration={3} floatStyle="sway">📈</Sticker>
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <Reveal>
-            <p className="section-label mb-4 justify-center">Nos services</p>
+            <p className="section-label mb-4 justify-center">Choisissez votre opération</p>
             <h1 className="text-balance text-heading-xl sm:text-display text-warm-900">
-              Tout ce qu&apos;il faut pour dominer{' '}
-              <span className="serif-accent">Google Maps.</span>
+              Des avis authentiques, un système{' '}
+              <span className="serif-accent">transparent.</span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-body-sm sm:text-body-lg text-warm-500">
-              Des offres claires, des résultats concrets. Pas de frais cachés, pas de surprise.
-              Choisissez le service adapté à vos enjeux.
+              3 packs adaptés à vos besoins. Sans engagement, résultats sous 14 jours.
             </p>
           </Reveal>
         </div>
@@ -643,7 +611,7 @@ export default function ServicesPage() {
                           s.highlighted ? 'text-accent-dark bg-accent/[0.04]' : 'text-warm-500'
                         }`}
                       >
-                        {s.title.split(' ').slice(0, 2).join(' ')}
+                        {s.title}
                       </th>
                     ))}
                   </tr>
@@ -651,38 +619,39 @@ export default function ServicesPage() {
                 <tbody className="divide-y divide-warm-200/40">
                   <tr>
                     <td className="p-5 font-medium text-warm-700">Prix</td>
-                    <td className="p-5 text-center font-semibold text-positive">Gratuit</td>
-                    <td className="p-5 text-center font-semibold text-warm-900 bg-accent/[0.04]">500€</td>
-                    <td className="p-5 text-center font-semibold text-warm-900">Sur devis</td>
-                    <td className="p-5 text-center font-semibold text-warm-900">400€/mois</td>
+                    <td className="p-5 text-center font-semibold text-warm-900">1 450€</td>
+                    <td className="p-5 text-center font-semibold text-warm-900 bg-accent/[0.04]">2 450€</td>
+                    <td className="p-5 text-center font-semibold text-warm-900">4 650€</td>
                   </tr>
                   <tr>
-                    <td className="p-5 font-medium text-warm-700">Format</td>
-                    <td className="p-5 text-center text-warm-500">Instantané</td>
-                    <td className="p-5 text-center text-warm-500 bg-accent/[0.04]">One-shot</td>
-                    <td className="p-5 text-center text-warm-500">Récurrent</td>
-                    <td className="p-5 text-center text-warm-500">Récurrent</td>
+                    <td className="p-5 font-medium text-warm-700">Testeurs</td>
+                    <td className="p-5 text-center text-warm-500">50</td>
+                    <td className="p-5 text-center text-warm-500 bg-accent/[0.04]">100</td>
+                    <td className="p-5 text-center text-warm-500">200</td>
                   </tr>
                   <tr>
-                    <td className="p-5 font-medium text-warm-700">Délai résultats</td>
-                    <td className="p-5 text-center text-warm-500">30 secondes</td>
-                    <td className="p-5 text-center text-warm-500 bg-accent/[0.04]">1-2 semaines</td>
-                    <td className="p-5 text-center text-warm-500">Dès le 1er mois</td>
-                    <td className="p-5 text-center text-warm-500">Dès la 1ère semaine</td>
+                    <td className="p-5 font-medium text-warm-700">Prix / testeur</td>
+                    <td className="p-5 text-center text-warm-500">29€</td>
+                    <td className="p-5 text-center text-warm-500 bg-accent/[0.04]">24,5€</td>
+                    <td className="p-5 text-center text-warm-500">~23€</td>
+                  </tr>
+                  <tr>
+                    <td className="p-5 font-medium text-warm-700">Matching avancé</td>
+                    <td className="p-5 text-center text-warm-500">—</td>
+                    <td className="p-5 text-center text-warm-500 bg-accent/[0.04]">Oui</td>
+                    <td className="p-5 text-center text-warm-500">Oui</td>
+                  </tr>
+                  <tr>
+                    <td className="p-5 font-medium text-warm-700">Account manager dédié</td>
+                    <td className="p-5 text-center text-warm-500">—</td>
+                    <td className="p-5 text-center text-warm-500 bg-accent/[0.04]">—</td>
+                    <td className="p-5 text-center text-warm-500">Oui</td>
                   </tr>
                   <tr>
                     <td className="p-5 font-medium text-warm-700">Idéal si…</td>
-                    <td className="p-5 text-center text-warm-500">Vous voulez savoir où vous en êtes</td>
-                    <td className="p-5 text-center text-warm-500 bg-accent/[0.04]">Votre fiche est incomplète ou mal optimisée</td>
-                    <td className="p-5 text-center text-warm-500">Vous manquez d&apos;avis récents</td>
-                    <td className="p-5 text-center text-warm-500">Vous voulez des leads immédiats</td>
-                  </tr>
-                  <tr>
-                    <td className="p-5 font-medium text-warm-700">Engagement</td>
-                    <td className="p-5 text-center text-warm-500">Aucun</td>
-                    <td className="p-5 text-center text-warm-500 bg-accent/[0.04]">Aucun</td>
-                    <td className="p-5 text-center text-warm-500">Candidature</td>
-                    <td className="p-5 text-center text-warm-500">Sans engagement</td>
+                    <td className="p-5 text-center text-warm-500">Vous voulez tester le concept</td>
+                    <td className="p-5 text-center text-warm-500 bg-accent/[0.04]">Vous voulez accélérer votre preuve sociale</td>
+                    <td className="p-5 text-center text-warm-500">Vous voulez un impact maximal</td>
                   </tr>
                 </tbody>
               </table>
@@ -697,10 +666,10 @@ export default function ServicesPage() {
           <Reveal className="mb-10 sm:mb-16 max-w-3xl">
             <p className="section-label mb-4">Avantages</p>
             <h2 className="text-balance text-heading-xl text-warm-900 sm:text-display">
-              Pourquoi choisir <span className="serif-accent">Siva</span> ?
+              Ce que nos clients obtiennent <span className="serif-accent">concrètement</span>
             </h2>
             <p className="mt-4 text-body-sm sm:text-body-lg text-warm-500">
-              Votre visibilité locale au service de vos enjeux business.
+              Des résultats mesurables pour votre réputation et votre croissance.
             </p>
           </Reveal>
 
@@ -783,20 +752,20 @@ export default function ServicesPage() {
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-heading-xl sm:text-display md:text-display-lg text-white">
-              Prêt à <span className="serif-accent text-accent">passer à l&apos;action</span> ?
+              Vos concurrents ont plus d&apos;avis que vous. <span className="serif-accent text-accent">Pas parce qu&apos;ils sont meilleurs.</span>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-body-sm sm:text-body-lg text-white/60">
-              Commencez par un audit gratuit ou prenez rendez-vous avec un expert.
+              Parce qu&apos;ils ont un système. Sans engagement. Résultats sous 14 jours. Satisfait ou re-testé.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link href="/rendez-vous" className="btn-accent">
-                Prendre rendez-vous
+                Lancer ma première opération
               </Link>
               <Link
-                href="/audit-gratuit"
+                href="/contact"
                 className="btn-secondary !bg-white/10 !border-white/20 !text-white hover:!bg-white/20"
               >
-                Lancer l&apos;audit gratuit
+                Planifier un appel de 15 min
               </Link>
             </div>
           </div>

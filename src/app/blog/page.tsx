@@ -55,10 +55,10 @@ export default function BlogPage() {
           <Reveal>
             <p className="section-label mb-4 justify-center">Blog</p>
             <h1 className="text-balance text-heading-xl sm:text-display text-warm-900">
-              Ressources & <span className="serif-accent">conseils SEO local</span>
+              Ressources & <span className="serif-accent">conseils réputation</span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-body-sm sm:text-body-lg text-warm-500">
-              Guides pratiques, études de cas et stratégies pour dominer Google Maps dans votre zone.
+              Guides pratiques, études de cas et stratégies pour construire votre preuve sociale.
             </p>
           </Reveal>
         </div>
@@ -181,15 +181,21 @@ export default function BlogPage() {
       <section className="rounded-t-[1.5rem] sm:rounded-t-[2.5rem] bg-warm-900 px-4 sm:px-6 py-14 sm:py-20 text-white">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-heading-xl text-white">
+            <h2 className="text-heading-xl sm:text-display md:text-display-lg text-white">
               Passez de la théorie à la <span className="serif-accent text-accent">pratique</span>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-body-sm sm:text-body-lg text-white/60">
               Laissez-nous auditer votre visibilité et construire votre plan d&apos;action.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link href="/rendez-vous" className="btn-accent">
                 Prendre rendez-vous
+              </Link>
+              <Link
+                href="/contact"
+                className="btn-secondary !bg-white/10 !border-white/20 !text-white hover:!bg-white/20"
+              >
+                Planifier un appel de 15 min
               </Link>
             </div>
           </div>

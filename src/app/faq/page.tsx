@@ -18,121 +18,63 @@ type FAQCategory = {
 
 const FAQ_CATEGORIES: FAQCategory[] = [
   {
-    id: 'siva',
-    label: 'Siva & nos services',
+    id: 'plateforme',
+    label: 'La plateforme',
     icon: 'map-pin' as const,
     items: [
       {
         q: 'Qu\'est-ce que Siva fait concrètement ?',
-        a: 'Siva est une agence spécialisée en visibilité locale sur Google Maps. On propose 4 services : un audit gratuit de votre fiche Google, l\'optimisation complète de votre fiche Google Business (one-shot), le Boost Avis Expérience (de vrais clients qui visitent votre établissement et laissent un avis authentique), et la gestion de vos campagnes Google Ads locales.',
+        a: 'Siva est une plateforme qui organise des expériences clients réelles pour générer de la preuve sociale authentique. Nous connectons des entreprises qui veulent des avis authentiques avec des testeurs qualifiés qui testent leurs produits et services gratuitement en échange de leur retour honnête.',
       },
       {
-        q: 'Pourquoi Google Maps est si important pour mon business ?',
-        a: '46% des recherches Google ont une intention locale. Quand quelqu\'un cherche "restaurant italien", "dentiste" ou "plombier" près de chez lui, Google affiche 3 résultats sur une carte — le "Local Pack". Si vous n\'y êtes pas, vos concurrents captent ces clients à votre place. C\'est le canal le plus rentable pour un commerce de proximité.',
+        q: 'Comment ça marche ?',
+        a: 'Vous créez une opération en définissant ce que vous offrez aux testeurs et le profil idéal. Notre plateforme matche votre offre avec des testeurs qualifiés. Ils testent réellement votre produit. Les satisfaits laissent un avis public authentique, les insatisfaits vous font un retour privé constructif.',
       },
       {
-        q: 'Comment se passe la collaboration avec Siva ?',
-        a: 'Tout commence par un audit gratuit pour évaluer votre situation actuelle. Ensuite, on vous recommande les services adaptés : optimisation de fiche, Boost Avis, Google Ads… On gère 95% du travail. Vous n\'avez qu\'à valider certains contenus et nous fournir des photos de temps en temps.',
+        q: 'Est-ce que les avis sont de vrais avis ?',
+        a: 'Oui. Les testeurs utilisent réellement votre produit. Leur retour est libre et honnête. Nous ne demandons jamais de note minimale. Chaque avis mentionne que le test a été réalisé via notre programme — transparence totale.',
       },
       {
-        q: 'Travaillez-vous avec des entreprises multi-établissements ?',
-        a: 'Oui. On accompagne des réseaux avec plusieurs points de vente. Chaque établissement bénéficie d\'une stratégie locale dédiée, et vous profitez de tarifs dégressifs à partir de 2 établissements (jusqu\'à -30% pour 5+).',
+        q: 'Combien de temps faut-il pour voir les premiers avis ?',
+        a: 'En moyenne, les premiers avis sont publiés sous 7 à 14 jours après le lancement de l\'opération.',
       },
     ],
   },
   {
-    id: 'audit',
-    label: 'Audit gratuit',
-    icon: 'star' as const,
+    id: 'legalite',
+    label: 'Légalité & transparence',
+    icon: 'shield' as const,
     items: [
       {
-        q: 'L\'audit gratuit est-il vraiment gratuit ?',
-        a: 'Oui, 100% gratuit et sans engagement. Aucune carte bancaire requise. Vous obtenez un rapport complet avec votre score d\'optimisation, une heatmap de vos positions, l\'analyse de vos concurrents et des recommandations IA personnalisées.',
+        q: 'Est-ce légal ?',
+        a: 'Oui. Notre modèle repose sur la transparence : chaque avis identifie le cadre du test. C\'est le même principe que les programmes Amazon Vine ou Bazaarvoice. Conforme aux règles Google, Trustpilot, et au droit français de la consommation.',
       },
       {
-        q: 'Que contient exactement l\'audit ?',
-        a: 'L\'audit comprend 4 éléments : un score d\'optimisation de votre fiche Google Business sur 100, une heatmap qui montre vos positions dans chaque quartier de votre zone, une analyse de vos 3 principaux concurrents, et des recommandations d\'actions prioritaires générées par IA.',
+        q: 'Et si les testeurs laissent des avis négatifs ?',
+        a: 'Les testeurs insatisfaits sont orientés vers un feedback privé constructif sur notre plateforme. Ils ne sont pas empêchés de publier un avis, mais le design du parcours canalise naturellement les retours négatifs en privé.',
       },
       {
-        q: 'Combien de temps dure l\'audit ?',
-        a: 'L\'audit est généré en quelques minutes grâce à nos outils d\'analyse automatisés. Vous recevez les résultats immédiatement. Si vous le souhaitez, on vous contacte sous 24h pour un débrief personnalisé gratuit.',
-      },
-      {
-        q: 'L\'audit m\'engage-t-il à acheter un service ?',
-        a: 'Non. L\'audit est un outil d\'aide à la décision. Il vous montre votre potentiel et vos axes d\'amélioration. Libre à vous ensuite de les appliquer seul ou de nous confier le travail.',
+        q: 'Pourquoi ça fonctionne ?',
+        a: 'Le biais de réciprocité est le moteur invisible. Un utilisateur qui reçoit quelque chose gratuitement est naturellement enclin à donner un retour positif — sans qu\'on le lui demande. Nous ne demandons jamais 5 étoiles. Nous créons les conditions pour que la satisfaction s\'exprime d\'elle-même.',
       },
     ],
   },
   {
-    id: 'optimisation',
-    label: 'Optimisation fiche Google',
+    id: 'operations',
+    label: 'Opérations & fonctionnement',
     icon: 'wrench' as const,
     items: [
       {
-        q: 'En quoi consiste l\'optimisation de ma fiche Google ?',
-        a: 'C\'est une prestation one-shot complète : on audite votre fiche existante, on optimise vos catégories, attributs et description SEO, on structure et uploade vos photos, on crée vos Q&A, produits/services, on vérifie vos horaires et on assure la cohérence de vos informations (nom, adresse, téléphone) sur les principaux annuaires.',
+        q: 'Qu\'est-ce que je dois offrir aux testeurs ?',
+        a: 'Cela dépend de votre activité : un accès gratuit à votre formation, une période d\'essai étendue de votre SaaS, un échantillon produit, une séance découverte de coaching… Vous définissez l\'offre au moment de créer votre opération.',
       },
       {
-        q: 'Pourquoi 500€ pour optimiser une fiche Google ?',
-        a: 'Une fiche Google bien optimisée, c\'est des dizaines de paramètres à régler correctement : catégories primaires et secondaires, description enrichie en mots-clés locaux, photos structurées, Q&A stratégiques, cohérence NAP sur les annuaires… Ce travail expert transforme une fiche basique en véritable machine à contacts.',
+        q: 'Comment sont sélectionnés les testeurs ?',
+        a: 'Chaque testeur a un profil vérifié sur la plateforme. Vous pouvez définir des critères (localisation, centres d\'intérêt, profil socio-démo) pour cibler les bons profils. Les testeurs candidatent et vous validez (ou nous le faisons pour vous).',
       },
       {
-        q: 'Est-ce un paiement unique ou un abonnement ?',
-        a: 'C\'est un paiement unique. On optimise votre fiche une fois, et elle reste optimisée. Il n\'y a pas de frais récurrents pour ce service. Si vous souhaitez un suivi continu, on peut en discuter séparément.',
-      },
-      {
-        q: 'Combien de temps pour voir les effets de l\'optimisation ?',
-        a: 'Les changements sont appliqués en quelques jours. Les premiers effets (meilleure visibilité, plus d\'impressions) apparaissent en 2 à 4 semaines. Les résultats significatifs en termes de positions Google Maps arrivent entre 60 et 90 jours.',
-      },
-    ],
-  },
-  {
-    id: 'boost-avis',
-    label: 'Boost Avis Expérience',
-    icon: 'star' as const,
-    items: [
-      {
-        q: 'Comment fonctionne le Boost Avis Expérience ?',
-        a: 'Des étudiants rigoureusement sélectionnés se rendent dans votre établissement, vivent une expérience réelle (repas, soin, consultation, achat…), puis laissent un avis Google détaillé et sincère basé sur leur vécu. Chaque avis est authentique et reflète une vraie visite.',
-      },
-      {
-        q: 'Est-ce que ce sont de faux avis ?',
-        a: 'Non. C\'est l\'inverse des faux avis. Nos étudiants visitent physiquement votre établissement, consomment un produit ou un service, et partagent leur retour d\'expérience honnête. Le processus est 100% conforme aux Conditions Générales d\'Utilisation de Google.',
-      },
-      {
-        q: 'Pourquoi faut-il candidater pour ce service ?',
-        a: 'On sélectionne les établissements partenaires pour garantir la qualité des expériences vécues par nos étudiants. On privilégie les commerces qui offrent un bon service et qui sont prêts à accueillir nos visiteurs dans de bonnes conditions.',
-      },
-      {
-        q: 'Combien d\'avis puis-je obtenir par mois ?',
-        a: 'Le volume dépend de votre formule et de votre localisation. On calibre le rythme pour que la progression soit naturelle aux yeux de Google. Un afflux trop rapide d\'avis serait contre-productif. On vous propose un plan adapté lors de l\'échange initial.',
-      },
-      {
-        q: 'Les étudiants paient-ils leur consommation ?',
-        a: 'Non, l\'expérience est offerte par l\'établissement. C\'est le principe : vous offrez un repas, un soin ou un service, et en retour vous obtenez un avis Google authentique et détaillé. Le coût est inclus dans le devis.',
-      },
-    ],
-  },
-  {
-    id: 'google-ads',
-    label: 'Google Ads Local',
-    icon: 'chart-line' as const,
-    items: [
-      {
-        q: 'En quoi consiste le service Google Ads Local ?',
-        a: 'On crée et gère vos campagnes publicitaires Google ciblées sur votre zone géographique : Google Search local, Local Service Ads (si éligible), et campagnes Maps. L\'objectif : générer des appels et des visites qualifiés, pas juste des clics.',
-      },
-      {
-        q: 'Quel budget pub faut-il prévoir ?',
-        a: 'Le budget publicitaire dépend de votre secteur et de votre zone. En général, on recommande entre 300€ et 1 000€/mois de budget média. On vous conseille le budget optimal en fonction de vos objectifs et de la concurrence locale.',
-      },
-      {
-        q: 'Quelle est la différence avec le SEO local ?',
-        a: 'Le SEO local (optimisation de fiche, avis) est un travail organique dont les effets sont durables mais progressifs. Google Ads donne des résultats immédiats tant que vous investissez. L\'idéal est de combiner les deux : Ads pour le court terme, SEO pour le long terme.',
-      },
-      {
-        q: 'Comment mesurez-vous les résultats des campagnes ?',
-        a: 'Chaque mois, vous recevez un reporting clair : nombre d\'appels générés, demandes d\'itinéraire, formulaires remplis, coût par lead, et ROI estimé. On track tout pour que vous sachiez exactement ce que chaque euro investi vous rapporte.',
+        q: 'Que comprend le dashboard ?',
+        a: 'Vous suivez tout en temps réel depuis votre dashboard : feedbacks structurés, avis publiés, scores, et progression de votre opération. Le dashboard varie selon votre pack (basique, avancé ou complet).',
       },
     ],
   },
@@ -142,20 +84,47 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     icon: 'dollar' as const,
     items: [
       {
-        q: 'Récapitulez-moi vos tarifs.',
-        a: 'Audit gratuit : 0€. Optimisation fiche Google : 500€ HT (one-shot). Google Ads Local : 400€/mois HT + budget pub. Boost Avis Expérience : sur devis après candidature. Tarifs dégressifs pour les multi-établissements (jusqu\'à -30%).',
+        q: 'Quels sont vos tarifs ?',
+        a: 'Nous proposons 3 packs : 50 testeurs (1 450€, soit 29€/testeur), 100 testeurs (2 450€, soit 24,5€/testeur), et 200 testeurs (4 650€, soit ~23€/testeur). Chaque pack inclut le feedback structuré et le suivi des avis. Des opérations sur-mesure sont aussi disponibles pour les gros volumes.',
       },
       {
         q: 'Y a-t-il un engagement de durée ?',
-        a: 'Non. L\'optimisation de fiche est un paiement unique. Le Google Ads est résiliable à tout moment, sans durée minimum. On préfère vous garder par la qualité de nos résultats plutôt que par une clause contractuelle.',
+        a: 'Non. Chaque opération est un achat ponctuel, sans abonnement ni engagement. Vous lancez une opération quand vous en avez besoin.',
       },
       {
         q: 'Quels moyens de paiement acceptez-vous ?',
-        a: 'Virement bancaire, prélèvement SEPA et carte bancaire. La facturation est claire et détaillée, avec un récapitulatif des actions réalisées.',
+        a: 'Virement bancaire, prélèvement SEPA et carte bancaire. La facturation est claire et détaillée.',
       },
       {
-        q: 'Proposez-vous des facilités de paiement ?',
-        a: 'Pour le one-shot optimisation, le paiement est en une fois. Pour le Google Ads mensuel, la facturation est automatique chaque mois. Si vous avez un besoin spécifique, contactez-nous pour en discuter.',
+        q: 'Quelle est la différence entre les packs ?',
+        a: 'Au-delà du nombre de testeurs, les packs supérieurs incluent du matching avancé, un rapport consolidé, un support prioritaire, et pour le pack Scale : un account manager dédié, la relance des testeurs, et une stratégie d\'avis personnalisée.',
+      },
+    ],
+  },
+  {
+    id: 'testeurs',
+    label: 'Espace testeur',
+    icon: 'star' as const,
+    items: [
+      {
+        q: 'C\'est vraiment gratuit pour les testeurs ?',
+        a: 'Oui. L\'inscription est gratuite. Les produits et services que tu testes sont offerts par les marques. Tu ne payes rien.',
+      },
+      {
+        q: 'Je suis obligé de mettre un avis positif ?',
+        a: 'Non. Jamais. Si tu as aimé, tu es invité à laisser un avis public. Si tu n\'as pas aimé, tu fais un retour privé constructif. Aucune pression, aucune note imposée.',
+      },
+      {
+        q: 'Quels types de produits je peux tester ?',
+        a: 'Formations en ligne, apps, SaaS, produits physiques, coaching, services digitaux… La variété augmente chaque semaine.',
+      },
+      {
+        q: 'Comment je suis sélectionné ?',
+        a: 'Ton profil est matché avec les critères de chaque opération. Plus ton profil est complet et ta réputation élevée, plus tu as accès aux meilleures expériences.',
+      },
+      {
+        q: 'Combien de temps ça prend ?',
+        a: 'Chaque opération précise la durée estimée du test. En général entre 30 minutes et quelques jours selon le produit.',
       },
     ],
   },
@@ -165,20 +134,20 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     icon: 'building' as const,
     items: [
       {
-        q: 'Je suis un indépendant ou une TPE, c\'est fait pour moi ?',
-        a: 'C\'est exactement pour vous. La majorité de nos clients sont des indépendants et petites entreprises : restaurants, médecins, avocats, artisans, garages, salons de coiffure, commerces de détail… Le SEO local est le levier le plus rentable quand votre clientèle vient de votre zone géographique.',
+        q: 'Je suis infopreneur ou formateur en ligne, c\'est fait pour moi ?',
+        a: 'C\'est idéal pour vous. Votre produit est 100% digital, testable à distance. Les avis sont votre principal levier de conversion. Nos testeurs accèdent gratuitement à votre formation et laissent un retour authentique.',
       },
       {
-        q: 'Je n\'ai pas de site web, est-ce un problème ?',
-        a: 'Non. Votre fiche Google Business Profile suffit pour apparaître dans les résultats Google Maps et générer des appels, des itinéraires et des visites. Un site web renforce votre crédibilité, mais ce n\'est pas un prérequis pour démarrer.',
+        q: 'Je lance mon activité et j\'ai zéro avis, c\'est trop tôt ?',
+        a: 'Au contraire, c\'est le moment parfait. Zéro avis au démarrage est un problème critique (le « cold start »). Notre service est conçu pour résoudre exactement ce frein en vous permettant d\'accumuler rapidement de la preuve sociale authentique.',
       },
       {
-        q: 'Je viens de créer mon entreprise, c\'est trop tôt ?',
-        a: 'Au contraire, c\'est le moment idéal. En optimisant votre fiche Google dès le départ, vous prenez de l\'avance sur les concurrents qui négligent leur visibilité locale. Les premiers mois sont déterminants pour construire votre réputation en ligne.',
+        q: 'Je suis une agence ou un freelance, ça marche aussi ?',
+        a: 'Oui. Le marché des services digitaux est saturé et la preuve sociale fait la différence entre deux prestataires. Vous pouvez offrir un audit gratuit, un livrable test ou une mini-mission en échange d\'un avis.',
       },
       {
-        q: 'Mon établissement est en zone rurale, ça marche quand même ?',
-        a: 'Oui, et souvent encore mieux. En zone rurale, la concurrence en ligne est généralement plus faible. Une fiche bien optimisée peut vous placer en tête très rapidement. C\'est un avantage que beaucoup de commerces ruraux sous-exploitent.',
+        q: 'Je suis un SaaS, comment ça fonctionne ?',
+        a: 'Vous proposez une période d\'essai étendue ou un accès premium gratuit. Les testeurs utilisent votre app et partagent leur retour. Idéal pour booster la social proof sur vos pages de pricing et les app stores.',
       },
     ],
   },
@@ -290,7 +259,7 @@ export default function FAQPage() {
               Tout savoir sur <span className="serif-accent">Siva</span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-body-sm sm:text-body-lg text-warm-500">
-              {totalQuestions} réponses sur nos services, nos tarifs et notre approche du SEO local.
+              {totalQuestions} réponses sur notre plateforme, nos opérations et notre approche de la preuve sociale.
             </p>
           </Reveal>
         </div>

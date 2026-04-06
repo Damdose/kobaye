@@ -40,10 +40,10 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="text-balance text-heading-xl text-warm-900 sm:text-display">
-            Parlons de votre <span className="serif-accent">visibilité locale</span>
+            Parlons de votre <span className="serif-accent">réputation</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-body-sm sm:text-body-lg text-warm-500">
-            Une question, un projet, une demande de devis ? Remplissez le formulaire ou contactez-nous directement.
+            Une question sur nos opérations, un besoin spécifique ? Remplissez le formulaire ou contactez-nous directement.
           </p>
         </div>
 
@@ -92,10 +92,10 @@ export default function ContactPage() {
               <h3 className="mb-3 text-lg font-medium text-warm-900">Pourquoi nous contacter ?</h3>
               <ul className="space-y-3">
                 {[
-                  'Obtenir un devis personnalisé',
-                  'Poser des questions sur nos services',
-                  'Planifier un audit gratuit',
-                  'Discuter de votre stratégie locale',
+                  'Lancer votre première opération de test',
+                  'Obtenir un devis sur-mesure',
+                  'Poser des questions sur la plateforme',
+                  'Discuter de votre stratégie de preuve sociale',
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 text-sm text-warm-600">
                     <RiCheckboxCircleFill className="h-4 w-4 shrink-0 text-accent-dark" />

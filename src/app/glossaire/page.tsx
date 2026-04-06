@@ -13,176 +13,158 @@ type GlossaryEntry = {
 
 const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
-    term: 'Google Business Profile (GBP)',
+    term: 'Preuve sociale',
     definition:
-      "Anciennement Google My Business, c'est l'outil gratuit de Google qui permet aux entreprises de gérer leur présence en ligne sur Google Search et Google Maps. C'est la base de toute stratégie de SEO local.",
-    category: 'Google',
+      "Phénomène psychologique où les individus se fient aux actions et opinions des autres pour guider leurs propres décisions. Les avis clients, témoignages et notes sont les formes les plus courantes de preuve sociale en ligne.",
+    category: 'Concepts',
   },
   {
-    term: 'Local Pack',
+    term: 'Avis authentique',
     definition:
-      "Le bloc de 3 résultats locaux qui apparaît en haut des résultats Google lors d'une recherche locale, accompagné d'une carte Google Maps. Apparaître dans le Local Pack est l'objectif principal du SEO local.",
-    category: 'SEO Local',
+      "Avis laissé par un utilisateur ayant réellement utilisé le produit ou service. Se distingue des faux avis par l'expérience vécue et la transparence sur le contexte (programme de test, achat vérifié, etc.).",
+    category: 'Avis',
   },
   {
-    term: 'NAP (Name, Address, Phone)',
+    term: 'Biais de réciprocité',
     definition:
-      'Acronyme désignant le nom, l\'adresse et le numéro de téléphone d\'une entreprise. La cohérence du NAP sur tous les annuaires et sites web est un facteur de ranking crucial pour le SEO local.',
-    category: 'SEO Local',
+      "Tendance naturelle à vouloir rendre la pareille lorsqu'on reçoit quelque chose. Dans le contexte du test produit, un utilisateur qui reçoit un accès gratuit est naturellement enclin à donner un retour positif — sans manipulation.",
+    category: 'Concepts',
   },
   {
-    term: 'Citation locale',
+    term: 'Cold start (problème du)',
     definition:
-      "Mention en ligne du NAP de votre entreprise sur des annuaires, sites web ou plateformes. Les citations cohérentes renforcent la confiance de Google dans la légitimité de votre entreprise.",
-    category: 'SEO Local',
+      "Situation où une entreprise ou un produit nouvellement lancé n'a aucun avis en ligne, ce qui freine la confiance des prospects et donc les premières ventes. C'est un cercle vicieux que les opérations de test permettent de briser.",
+    category: 'Business',
   },
   {
-    term: 'Fiche Google',
+    term: 'Opération de test',
     definition:
-      "Le profil de votre entreprise tel qu'il apparaît sur Google Maps et dans les résultats de recherche. Elle contient vos informations (horaires, photos, avis, services, etc.).",
-    category: 'Google',
+      "Campagne organisée sur la plateforme où une entreprise offre l'accès à son produit/service à des testeurs qualifiés en échange de leur retour honnête. Chaque opération définit l'offre, le profil testeur idéal et les objectifs.",
+    category: 'Plateforme',
   },
   {
-    term: 'Avis Google',
+    term: 'Testeur qualifié',
     definition:
-      "Les évaluations et commentaires laissés par les clients sur votre fiche Google Business Profile. La quantité, la qualité et la récence des avis sont des facteurs de classement majeurs.",
-    category: 'Google',
+      "Utilisateur inscrit sur la plateforme avec un profil vérifié, des centres d'intérêt renseignés et un historique de tests. Les testeurs sont matchés avec les opérations selon leur profil.",
+    category: 'Plateforme',
   },
   {
-    term: 'SEO Local',
+    term: 'Feedback structuré',
     definition:
-      "Ensemble des techniques d'optimisation visant à améliorer la visibilité d'une entreprise dans les résultats de recherche géolocalisés (Google Maps, Local Pack). Contrairement au SEO classique, il cible une zone géographique précise.",
-    category: 'SEO Local',
+      "Retour d'expérience organisé selon un format prédéfini sur la plateforme. Permet aux entreprises d'obtenir des insights exploitables et comparables plutôt que des commentaires libres non structurés.",
+    category: 'Plateforme',
   },
   {
-    term: 'Géogrille (Grid Search)',
+    term: 'Feedback privé constructif',
     definition:
-      "Technique d'analyse qui consiste à simuler des recherches Google Maps depuis différents points géographiques pour cartographier la visibilité d'une entreprise sur une zone donnée.",
-    category: 'Outils',
+      "Retour négatif ou mitigé d'un testeur, canalisé vers la plateforme plutôt que publié en ligne. Permet à l'entreprise de s'améliorer sans impact sur sa réputation publique.",
+    category: 'Plateforme',
   },
   {
-    term: 'Heatmap de visibilité',
+    term: 'Mention de transparence',
     definition:
-      "Carte thermique montrant les positions de votre fiche Google sur une grille géographique. Les zones vertes indiquent un bon classement, les rouges un classement faible.",
-    category: 'Outils',
+      "Indication dans un avis public que le test a été réalisé dans le cadre d'un programme de test. Obligatoire pour la conformité avec les règles Google, Trustpilot et le droit français.",
+    category: 'Légal',
   },
   {
-    term: 'Catégorie principale',
+    term: 'Amazon Vine',
     definition:
-      "La catégorie la plus importante de votre fiche Google Business Profile. Elle doit correspondre précisément à votre activité principale car elle a un impact direct sur les recherches pour lesquelles vous apparaissez.",
-    category: 'Google',
+      "Programme d'Amazon qui envoie des produits gratuits à des testeurs sélectionnés en échange d'avis honnêtes. Modèle de référence pour les programmes de test produit transparents et conformes.",
+    category: 'Références',
   },
   {
-    term: 'Catégories secondaires',
+    term: 'Bazaarvoice',
     definition:
-      "Les catégories additionnelles que vous pouvez ajouter à votre fiche GBP pour couvrir vos activités complémentaires. Elles permettent d'élargir les requêtes sur lesquelles vous pouvez apparaître.",
-    category: 'Google',
+      "Plateforme de gestion d'avis et de contenu généré par les utilisateurs (UGC). Propose des programmes de sampling et de test produit à grande échelle pour les marques.",
+    category: 'Références',
   },
   {
-    term: 'Google Posts',
+    term: 'Taux de conversion',
     definition:
-      "Publications (actualités, offres, événements) que vous pouvez créer directement depuis votre fiche Google Business Profile. Ils signalent à Google que votre fiche est active.",
-    category: 'Google',
-  },
-  {
-    term: 'Proéminence',
-    definition:
-      "L'un des 3 facteurs de classement Google Maps. Elle mesure la notoriété de votre entreprise en ligne : nombre d'avis, citations, backlinks, présence sur les réseaux sociaux.",
-    category: 'SEO Local',
-  },
-  {
-    term: 'Proximité',
-    definition:
-      "L'un des 3 facteurs de classement Google Maps. Elle correspond à la distance entre l'internaute (ou le lieu recherché) et votre entreprise. Facteur sur lequel vous avez le moins de contrôle.",
-    category: 'SEO Local',
-  },
-  {
-    term: 'Pertinence',
-    definition:
-      "L'un des 3 facteurs de classement Google Maps. Elle mesure la correspondance entre la requête de l'internaute et les informations de votre fiche (catégories, description, services, etc.).",
-    category: 'SEO Local',
-  },
-  {
-    term: 'LSA (Local Services Ads)',
-    definition:
-      "Annonces de services locaux Google qui apparaissent tout en haut des résultats avec un badge \"Garanti par Google\". Modèle au coût par lead, idéal pour les prestataires de services.",
-    category: 'Publicité',
-  },
-  {
-    term: 'Google Ads Local',
-    definition:
-      "Campagnes publicitaires Google ciblant une zone géographique précise. Elles permettent d'apparaître en tête des résultats de recherche et sur Google Maps pour des requêtes locales.",
-    category: 'Publicité',
-  },
-  {
-    term: 'CPC (Coût par Clic)',
-    definition:
-      "Modèle de tarification publicitaire où l'annonceur paie chaque fois qu'un utilisateur clique sur son annonce. Le CPC varie selon la concurrence et la localisation.",
-    category: 'Publicité',
-  },
-  {
-    term: 'Taux de conversion local',
-    definition:
-      "Pourcentage de visiteurs de votre fiche Google qui effectuent une action (appel, itinéraire, visite du site web). Un indicateur clé de la performance de votre présence locale.",
+      "Pourcentage de visiteurs qui effectuent l'action souhaitée (achat, inscription, prise de contact). Les avis positifs authentiques augmentent significativement le taux de conversion.",
     category: 'Métriques',
   },
   {
-    term: 'Impressions Maps',
+    term: 'Note moyenne',
     definition:
-      "Nombre de fois où votre fiche est apparue dans les résultats Google Maps. Cette métrique permet de mesurer votre visibilité locale brute.",
+      "Score moyen des avis publiés sur une plateforme (Google, Trustpilot, etc.). Une note supérieure à 4.0/5 est généralement considérée comme le seuil de confiance pour les consommateurs.",
     category: 'Métriques',
   },
   {
-    term: 'Actions sur la fiche',
+    term: 'Volume d\'avis',
     definition:
-      "Les interactions des utilisateurs avec votre fiche GBP : appels, demandes d'itinéraire, clics vers le site web, messages. Ces métriques mesurent l'engagement.",
+      "Nombre total d'avis publiés pour un produit ou une entreprise. Au-delà de la note, le volume d'avis est un facteur de confiance crucial : 10 avis à 4.5 étoiles sont moins convaincants que 100 avis à 4.3.",
     category: 'Métriques',
   },
   {
-    term: 'Backlink local',
+    term: 'Récence des avis',
     definition:
-      "Lien provenant d'un site web local (mairie, association, annuaire local, presse régionale) pointant vers votre site. Les backlinks locaux renforcent votre autorité géographique.",
-    category: 'SEO Local',
+      "Fraîcheur des avis publiés. Les consommateurs et les algorithmes de Google privilégient les avis récents. Des avis vieux de plus de 6 mois perdent en impact.",
+    category: 'Métriques',
   },
   {
-    term: 'Schema LocalBusiness',
+    term: 'Marketplace B2B2C',
     definition:
-      "Balisage structuré (JSON-LD) à intégrer sur votre site web pour aider Google à comprendre les informations de votre entreprise locale (nom, adresse, horaires, etc.).",
-    category: 'Technique',
+      "Modèle de plateforme à deux faces qui connecte des entreprises (B2B) et des consommateurs (B2C). Siva fonctionne sur ce modèle en connectant des businesses avec des testeurs.",
+    category: 'Business',
   },
   {
-    term: 'Recherche « near me »',
+    term: 'Matching testeur',
     definition:
-      "Requêtes incluant \"près de moi\" ou \"à proximité\". Ce type de recherche a explosé (+500% en 5 ans) et déclenche systématiquement des résultats Google Maps.",
-    category: 'SEO Local',
+      "Algorithme de la plateforme qui associe les testeurs les plus pertinents à chaque opération en fonction de critères comme la localisation, les centres d'intérêt et le profil socio-démographique.",
+    category: 'Plateforme',
   },
   {
-    term: 'Intention locale',
+    term: 'Profil testeur',
     definition:
-      "Requête de recherche pour laquelle Google considère que l'utilisateur cherche un résultat géographiquement proche. Google affiche alors un Local Pack même sans mention de lieu.",
-    category: 'SEO Local',
+      "Page personnelle du testeur sur la plateforme incluant ses centres d'intérêt, son historique de tests, ses badges et sa réputation. Un profil complet augmente les chances d'être sélectionné.",
+    category: 'Plateforme',
   },
   {
-    term: 'Audit SEO local',
+    term: 'Réputation testeur',
     definition:
-      "Analyse complète de la présence en ligne locale d'une entreprise : fiche GBP, citations, avis, positionnement sur une géogrille, analyse des concurrents et recommandations.",
-    category: 'Outils',
+      "Score de confiance attribué à un testeur basé sur la qualité et la régularité de ses retours. Les testeurs avec une haute réputation accèdent aux opérations premium en priorité.",
+    category: 'Plateforme',
   },
   {
-    term: 'Remarketing local',
+    term: 'UGC (User Generated Content)',
     definition:
-      "Stratégie publicitaire qui cible les personnes ayant déjà interagi avec votre entreprise (visite du site, fiche Google) avec des annonces personnalisées.",
-    category: 'Publicité',
+      "Contenu créé par les utilisateurs (avis, photos, vidéos, témoignages). Le UGC est considéré comme plus authentique et crédible que le contenu marketing produit par la marque elle-même.",
+    category: 'Concepts',
   },
   {
-    term: 'SERP locale',
+    term: 'Social proof (preuve sociale)',
     definition:
-      "Page de résultats de recherche Google affichée pour une requête à intention locale. Elle inclut typiquement un Local Pack, des annonces locales et des résultats organiques.",
-    category: 'SEO Local',
+      "Version anglaise de la preuve sociale. Terme marketing désignant l'ensemble des signaux qui montrent que d'autres personnes ont fait confiance à un produit ou service : avis, témoignages, nombre de clients, logos partenaires.",
+    category: 'Concepts',
+  },
+  {
+    term: 'Trustpilot',
+    definition:
+      "Plateforme d'avis en ligne indépendante permettant aux consommateurs d'évaluer les entreprises. Avec Google, c'est l'une des principales sources d'avis consultées avant un achat.",
+    category: 'Références',
+  },
+  {
+    term: 'Google Reviews',
+    definition:
+      "Système d'avis intégré à Google Business Profile. Les avis Google influencent directement le référencement local et sont visibles dans les résultats de recherche et sur Google Maps.",
+    category: 'Références',
+  },
+  {
+    term: 'Droit de la consommation (avis)',
+    definition:
+      "En France, la réglementation impose que les avis publiés soient authentiques et que tout lien commercial soit déclaré. Les programmes de test avec mention de transparence sont conformes à cette réglementation.",
+    category: 'Légal',
+  },
+  {
+    term: 'CGU Google (avis)',
+    definition:
+      "Conditions Générales d'Utilisation de Google concernant les avis. Google autorise les avis issus de programmes de test à condition qu'ils reflètent une expérience réelle et soient transparents sur le contexte.",
+    category: 'Légal',
   },
 ];
 
-const CATEGORIES = ['Tous', 'SEO Local', 'Google', 'Publicité', 'Outils', 'Métriques', 'Technique'];
+const CATEGORIES = ['Tous', 'Concepts', 'Plateforme', 'Avis', 'Business', 'Métriques', 'Légal', 'Références'];
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -244,11 +226,10 @@ export default function GlossairePage() {
           <Reveal>
             <p className="section-label mb-4 justify-center">Ressources</p>
             <h1 className="text-balance text-heading-xl text-warm-900 sm:text-display">
-              Glossaire du <span className="serif-accent">SEO local</span>
+              Glossaire de la <span className="serif-accent">preuve sociale</span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-body-sm text-warm-500 sm:text-body-lg">
-              Tous les termes clés du référencement local expliqués simplement.
-              De Google Business Profile au Local Pack, maîtrisez le vocabulaire.
+              Tous les termes clés de la réputation en ligne et du test produit expliqués simplement.
             </p>
           </Reveal>
         </div>
@@ -387,15 +368,21 @@ export default function GlossairePage() {
       <section className="rounded-t-[1.5rem] bg-warm-900 px-4 py-14 text-white sm:rounded-t-[2.5rem] sm:px-6 sm:py-20">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-heading-xl text-white">
-              Besoin d&apos;un <span className="serif-accent text-accent">accompagnement</span> ?
+            <h2 className="text-heading-xl sm:text-display md:text-display-lg text-white">
+              Prêt à passer à <span className="serif-accent text-accent">l&apos;action</span> ?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-body-sm text-white/60 sm:text-body-lg">
-              On passe du jargon à l&apos;action. Laissez-nous auditer votre visibilité locale.
+              Lancez votre première opération de test et générez de la preuve sociale authentique.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link href="/rendez-vous" className="btn-accent">
-                Prendre rendez-vous
+                Lancer une opération
+              </Link>
+              <Link
+                href="/contact"
+                className="btn-secondary !bg-white/10 !border-white/20 !text-white hover:!bg-white/20"
+              >
+                Planifier un appel de 15 min
               </Link>
             </div>
           </div>

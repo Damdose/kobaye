@@ -266,6 +266,62 @@ input:-webkit-autofill {
       @apply font-serif font-normal italic;
     }
   }
+
+  /* Pricing range slider — Zapier / Make style */
+  .pricing-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 9999px;
+    background: linear-gradient(to right, #1A1714 0%, #1A1714 var(--slider-pct, 50%), #E8E2D9 var(--slider-pct, 50%), #E8E2D9 100%);
+    outline: none;
+    cursor: pointer;
+  }
+
+  .pricing-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 9999px;
+    background: #1A1714;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.05);
+    cursor: grab;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .pricing-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.12);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.08);
+  }
+
+  .pricing-slider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+    transform: scale(1.05);
+  }
+
+  .pricing-slider::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    border-radius: 9999px;
+    background: #1A1714;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.05);
+    cursor: grab;
+  }
+
+  .pricing-slider::-moz-range-track {
+    height: 6px;
+    border-radius: 9999px;
+    background: #E8E2D9;
+  }
+
+  .pricing-slider::-moz-range-progress {
+    height: 6px;
+    border-radius: 9999px;
+    background: #1A1714;
+  }
 }
 
 @media (min-width: 640px) {
