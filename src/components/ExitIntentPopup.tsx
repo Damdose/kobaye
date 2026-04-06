@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { X, MapPin, Sparkle, ChartBar, NavigationArrow } from '@phosphor-icons/react';
 
-const STORAGE_KEY = 'siva_exit_popup_shown';
+const STORAGE_KEY = 'kobaye_exit_popup_shown';
 const AUDIT_PATHS = ['/audit', '/audit-gratuit'];
 
 function MapIllustration() {

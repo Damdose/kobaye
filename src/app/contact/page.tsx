@@ -13,7 +13,7 @@ import {
 const CONTACT_INFO = [
   { Icon: RiMapPin2Fill, label: 'Adresse', value: 'Paris, France' },
   { Icon: RiPhoneFill, label: 'Téléphone', value: '+33 7 60 55 40 00', href: 'tel:+33760554000' },
-  { Icon: RiMailFill, label: 'Email', value: 'contact@siva.local', href: 'mailto:contact@siva.local' },
+  { Icon: RiMailFill, label: 'Email', value: 'contact@kobaye.fr', href: 'mailto:contact@kobaye.fr' },
   { Icon: RiTimeFill, label: 'Horaires', value: 'Lun – Ven, 9h – 18h' },
 ];
 

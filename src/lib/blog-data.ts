@@ -61,7 +61,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <ul>
 <li><strong>Catégorie principale</strong> : choisissez la plus spécifique possible. "Pizzeria" est meilleur que "Restaurant italien".</li>
 <li><strong>Catégories secondaires</strong> : ajoutez-en 3 à 5 pour couvrir vos services annexes (livraison, traiteur, etc.).</li>
-<li><strong>Analysez vos concurrents</strong> : utilisez un outil comme Siva pour voir quelles catégories utilisent les fiches qui apparaissent dans le top 3.</li>
+<li><strong>Analysez vos concurrents</strong> : utilisez un outil comme Kobaye pour voir quelles catégories utilisent les fiches qui apparaissent dans le top 3.</li>
 </ul>
 <p>Une mauvaise catégorie peut vous rendre <em>invisible</em> sur vos mots-clés les plus importants. Prenez le temps de bien la choisir dès le départ.</p>`,
       },
@@ -154,7 +154,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <li>Inscrivez-vous sur les annuaires locaux principaux : PagesJaunes, Yelp, TripAdvisor, annuaires de votre secteur.</li>
 <li>Supprimez les fiches doublons qui pourraient créer de la confusion.</li>
 </ul>
-<p>Un audit NAP complet devrait être réalisé au moins une fois par an. Siva peut automatiser cette vérification pour vous.</p>`,
+<p>Un audit NAP complet devrait être réalisé au moins une fois par an. Kobaye peut automatiser cette vérification pour vous.</p>`,
       },
       {
         id: 'suivi-performance',
@@ -180,7 +180,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <li><strong>Mensuel</strong> : analyser les statistiques et ajuster la stratégie.</li>
 <li><strong>Trimestriel</strong> : audit complet de la fiche et mise à jour des informations.</li>
 </ul>
-<p>Avec Siva, vous pouvez obtenir un <strong>audit gratuit de votre fiche</strong> en quelques minutes et identifier exactement les points à améliorer. C'est le point de départ idéal pour une optimisation efficace.</p>`,
+<p>Avec Kobaye, vous pouvez obtenir un <strong>audit gratuit de votre fiche</strong> en quelques minutes et identifier exactement les points à améliorer. C'est le point de départ idéal pour une optimisation efficace.</p>`,
       },
     ],
   },
@@ -262,7 +262,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         id: 'strategie-combinee',
         title: 'La stratégie combinée idéale',
-        content: `<p>L'idéal n'est pas de choisir entre SEO local et SEO classique, mais de les <strong>combiner intelligemment</strong>. Voici l'approche que nous recommandons chez Siva :</p>
+        content: `<p>L'idéal n'est pas de choisir entre SEO local et SEO classique, mais de les <strong>combiner intelligemment</strong>. Voici l'approche que nous recommandons chez Kobaye :</p>
 <ul>
 <li><strong>Phase 1 (mois 1-2)</strong> : optimisation complète de votre fiche Google Business Profile pour des résultats rapides.</li>
 <li><strong>Phase 2 (mois 2-4)</strong> : création de pages locales sur votre site (page ville, landing pages services).</li>
@@ -446,9 +446,9 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         id: 'strategie-top3',
         title: 'Plan d\'action pour atteindre le top 3',
-        content: `<p>Voici la stratégie pas à pas que nous appliquons chez Siva pour positionner nos clients dans le Local Pack.</p>
+        content: `<p>Voici la stratégie pas à pas que nous appliquons chez Kobaye pour positionner nos clients dans le Local Pack.</p>
 <h3>Étape 1 : Audit de départ</h3>
-<p>Identifiez votre position actuelle sur vos 5 à 10 mots-clés principaux, dans différentes zones autour de votre établissement. L'outil d'audit gratuit de Siva fait exactement cela.</p>
+<p>Identifiez votre position actuelle sur vos 5 à 10 mots-clés principaux, dans différentes zones autour de votre établissement. L'outil d'audit gratuit de Kobaye fait exactement cela.</p>
 <h3>Étape 2 : Optimisation de la fiche</h3>
 <p>Appliquez les 10 étapes de notre guide d'optimisation GBP. Catégorie, description, photos, attributs : chaque détail compte.</p>
 <h3>Étape 3 : Stratégie d'avis</h3>
@@ -463,7 +463,7 @@ export const BLOG_POSTS: BlogPost[] = [
         title: 'Les outils pour mesurer votre progression',
         content: `<p>Vous ne pouvez pas améliorer ce que vous ne mesurez pas. Voici les outils essentiels pour <strong>suivre votre position</strong> dans le Local Pack.</p>
 <ul>
-<li><strong>Siva</strong> : audit gratuit avec heatmap de votre visibilité dans votre zone de chalandise. Idéal pour un premier diagnostic.</li>
+<li><strong>Kobaye</strong> : audit gratuit avec heatmap de votre visibilité dans votre zone de chalandise. Idéal pour un premier diagnostic.</li>
 <li><strong>Google Business Profile Insights</strong> : données natives sur les recherches, vues et actions.</li>
 <li><strong>BrightLocal</strong> : suivi des positions local avec rapports détaillés.</li>
 <li><strong>Whitespark</strong> : audit des citations et suivi du ranking local.</li>
@@ -473,7 +473,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         id: 'cas-concrets',
         title: 'Résultats concrets : 3 études de cas',
-        content: `<p>Pour illustrer l'efficacité de cette stratégie, voici 3 résultats obtenus par des clients Siva.</p>
+        content: `<p>Pour illustrer l'efficacité de cette stratégie, voici 3 résultats obtenus par des clients Kobaye.</p>
 <h3>Boulangerie – Paris 11e</h3>
 <p>De la position 8 à la position 2 sur "boulangerie Paris 11" en 6 semaines. <strong>+340% de demandes d'itinéraire</strong>.</p>
 <h3>Cabinet d'avocats – Lyon</h3>
@@ -588,7 +588,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <li>Ajoutez toujours une image et un appel à l'action.</li>
 <li>Utilisez des mots-clés dans le texte du post.</li>
 </ul>
-<p>Corrigez ces 7 erreurs et vous verrez une amélioration significative de votre visibilité en <strong>2 à 4 semaines</strong>. Pour un audit complet et personnalisé de votre fiche, testez l'outil gratuit de Siva.</p>`,
+<p>Corrigez ces 7 erreurs et vous verrez une amélioration significative de votre visibilité en <strong>2 à 4 semaines</strong>. Pour un audit complet et personnalisé de votre fiche, testez l'outil gratuit de Kobaye.</p>`,
       },
     ],
   },
@@ -631,7 +631,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         id: 'chiffres-secteur',
         title: 'Chiffres moyens par secteur',
-        content: `<p>Voici les <strong>benchmarks de performance</strong> que nous observons chez nos clients Siva, par secteur d'activité.</p>
+        content: `<p>Voici les <strong>benchmarks de performance</strong> que nous observons chez nos clients Kobaye, par secteur d'activité.</p>
 <h3>Restauration</h3>
 <ul>
 <li>Coût moyen SEO local : 300-600€/mois</li>
@@ -699,7 +699,7 @@ export const BLOG_POSTS: BlogPost[] = [
 </ul>
 <p><strong>Formule rapide</strong> : Recherches mensuelles × CTR × 5% × Valeur client = Revenus mensuels potentiels</p>
 <p>Exemple : un plombier à Lyon avec 2 400 recherches/mois, s'il passe de la position 8 (2% CTR) à la position 2 (25% CTR), passe de 2 400€/mois à <strong>30 000€/mois</strong> de revenus générés par Google.</p>
-<p>Pour un calcul personnalisé et gratuit, lancez un audit Siva. Notre outil estime automatiquement le revenu potentiel en fonction de votre position et de votre secteur.</p>`,
+<p>Pour un calcul personnalisé et gratuit, lancez un audit Kobaye. Notre outil estime automatiquement le revenu potentiel en fonction de votre position et de votre secteur.</p>`,
       },
     ],
   },

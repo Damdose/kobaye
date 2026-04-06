@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const COOKIE_CONSENT_KEY = 'siva_cookie_consent';
+const COOKIE_CONSENT_KEY = 'kobaye_cookie_consent';
 
 type ConsentState = 'undecided' | 'accepted' | 'rejected';
 

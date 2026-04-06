@@ -148,14 +148,14 @@ const TESTIMONIALS = [
     name: 'Antoine L.',
     role: 'Médecin · Paris',
     avatar: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=120&h=120&fit=crop&crop=center',
-    text: 'En tant que professionnel de santé, je ne connaissais rien au référencement. Siva a tout pris en main. Mon cabinet apparaît maintenant en 1ère position sur 80% de ma zone.',
+    text: 'En tant que professionnel de santé, je ne connaissais rien au référencement. Kobaye a tout pris en main. Mon cabinet apparaît maintenant en 1ère position sur 80% de ma zone.',
     rating: 5,
   },
   {
     name: 'Camille M.',
     role: 'Opticienne · Nantes',
     avatar: 'https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=120&h=120&fit=crop&crop=center',
-    text: 'L\'approche data-driven de Siva est bluffante. On voit exactement ce qui marche, zone par zone. Nos concurrents nous demandent comment on fait.',
+    text: 'L\'approche data-driven de Kobaye est bluffante. On voit exactement ce qui marche, zone par zone. Nos concurrents nous demandent comment on fait.',
     rating: 5,
   },
 ];

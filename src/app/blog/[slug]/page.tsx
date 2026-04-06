@@ -15,10 +15,10 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
 
-  const url = `https://www.siva.fr/blog/${post.slug}`;
+  const url = `https://www.kobaye.fr/blog/${post.slug}`;
 
   return {
-    title: `${post.title} | Siva Blog`,
+    title: `${post.title} | Kobaye Blog`,
     description: post.metaDescription,
     keywords: post.tags.join(', '),
     authors: [{ name: post.author.name }],
@@ -27,7 +27,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
       title: post.title,
       description: post.metaDescription,
       url,
-      siteName: 'Siva',
+      siteName: 'Kobaye',
       locale: 'fr_FR',
       publishedTime: post.dateISO,
       modifiedTime: post.updatedDateISO || post.dateISO,
@@ -60,7 +60,7 @@ function ArticleJsonLd({ post }: { post: NonNullable<ReturnType<typeof getPostBy
     '@type': 'Article',
     headline: post.title,
     description: post.metaDescription,
-    image: `https://www.siva.fr${post.coverImage}`,
+    image: `https://www.kobaye.fr${post.coverImage}`,
     datePublished: post.dateISO,
     dateModified: post.updatedDateISO || post.dateISO,
     author: {
@@ -70,15 +70,15 @@ function ArticleJsonLd({ post }: { post: NonNullable<ReturnType<typeof getPostBy
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Siva',
+      name: 'Kobaye',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.siva.fr/logo.svg',
+        url: 'https://www.kobaye.fr/logo.svg',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://www.siva.fr/blog/${post.slug}`,
+      '@id': `https://www.kobaye.fr/blog/${post.slug}`,
     },
     wordCount: post.sections.reduce((acc, s) => acc + s.content.split(/\s+/).length, 0),
     articleSection: post.category,

@@ -142,14 +142,14 @@ const TESTIMONIALS = [
     name: 'Marie L.',
     role: 'Restauratrice · Paris',
     avatar: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=120&h=120&fit=crop&crop=center',
-    text: 'En 3 mois, on est passé de la 12e à la 2e position sur "restaurant italien" dans notre quartier. Les appels ont doublé. L\'équipe Siva est redoutablement efficace.',
+    text: 'En 3 mois, on est passé de la 12e à la 2e position sur "restaurant italien" dans notre quartier. Les appels ont doublé. L\'équipe Kobaye est redoutablement efficace.',
     rating: 5,
   },
   {
     name: 'Julien D.',
     role: 'Plombier · Marseille',
     avatar: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=120&h=120&fit=crop&crop=center',
-    text: 'Avant Siva, on n\'existait pas sur Google Maps. En 6 semaines, on était dans le top 3 sur "plombier urgence". Les appels ont explosé, le CPL est imbattable.',
+    text: 'Avant Kobaye, on n\'existait pas sur Google Maps. En 6 semaines, on était dans le top 3 sur "plombier urgence". Les appels ont explosé, le CPL est imbattable.',
     rating: 5,
   },
   {

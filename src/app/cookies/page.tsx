@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Politique de cookies — Siva',
-  description: 'Découvrez comment Siva utilise les cookies pour améliorer votre expérience de navigation.',
+  title: 'Politique de cookies — Kobaye',
+  description: 'Découvrez comment Kobaye utilise les cookies pour améliorer votre expérience de navigation.',
 };
 
 export default function CookiesPage() {

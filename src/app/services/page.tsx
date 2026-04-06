@@ -660,7 +660,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── 5. Avantages – Pourquoi Siva ── */}
+      {/* ── 5. Avantages – Pourquoi Kobaye ── */}
       <section className="px-4 sm:px-6 py-14 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal className="mb-10 sm:mb-16 max-w-3xl">

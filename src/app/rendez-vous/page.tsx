@@ -179,7 +179,7 @@ export default function RendezVousPage() {
                         <span className="ml-1 text-sm font-semibold text-warm-800">4.9/5</span>
                       </div>
                       <p className="text-xs text-warm-500">
-                        Nos clients recommandent Siva
+                        Nos clients recommandent Kobaye
                       </p>
                     </div>
                   </div>

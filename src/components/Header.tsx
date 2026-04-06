@@ -20,7 +20,7 @@ const RESOURCE_ITEMS: { href: string; label: string; description: string; icon: 
 const NAV_LINKS = [
   { href: '/comment-ca-marche', label: 'Comment ça marche' },
   { href: '/ambassadeur', label: 'Devenir testeur' },
-  { href: '/asso', label: 'Associations' },
+  { href: '/asso', label: 'Assos' },
   { href: '/services', label: 'Tarifs' },
 ];
 

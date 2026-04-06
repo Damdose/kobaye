@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mentions légales — Siva',
-  description: 'Mentions légales du site Siva, agence SEO locale Google Maps.',
+  title: 'Mentions légales — Kobaye',
+  description: 'Mentions légales du site Kobaye.',
 };
 
 export default function MentionsLegalesPage() {
@@ -22,13 +22,13 @@ export default function MentionsLegalesPage() {
           <section>
             <h2>1. Éditeur du site</h2>
             <p>
-              Le site <strong>siva.local</strong> est édité par la société Siva, société par actions simplifiée (SAS)
+              Le site <strong>kobaye.fr</strong> est édité par la société Kobaye, société par actions simplifiée (SAS)
               au capital de 1 000 €, immatriculée au Registre du Commerce et des Sociétés de Paris.
             </p>
             <p>Siège social : Paris, France</p>
             <p>Téléphone : +33 7 60 55 40 00</p>
-            <p>Email : contact@siva.local</p>
-            <p>Directeur de la publication : Le représentant légal de la société Siva.</p>
+            <p>Email : contact@kobaye.fr</p>
+            <p>Directeur de la publication : Le représentant légal de la société Kobaye.</p>
           </section>
 
           <section>
@@ -42,25 +42,25 @@ export default function MentionsLegalesPage() {
             <h2>3. Propriété intellectuelle</h2>
             <p>
               L&apos;ensemble du contenu du site (textes, images, graphismes, logo, icônes, sons, logiciels, etc.) est
-              la propriété exclusive de Siva ou de ses partenaires et est protégé par les lois françaises et
+              la propriété exclusive de Kobaye ou de ses partenaires et est protégé par les lois françaises et
               internationales relatives à la propriété intellectuelle.
             </p>
             <p>
               Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments
               du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable
-              de Siva.
+              de Kobaye.
             </p>
           </section>
 
           <section>
             <h2>4. Limitation de responsabilité</h2>
             <p>
-              Siva s&apos;efforce d&apos;assurer au mieux de ses possibilités l&apos;exactitude et la mise à jour des
-              informations diffusées sur ce site. Toutefois, Siva ne peut garantir l&apos;exactitude, la précision ou
+              Kobaye s&apos;efforce d&apos;assurer au mieux de ses possibilités l&apos;exactitude et la mise à jour des
+              informations diffusées sur ce site. Toutefois, Kobaye ne peut garantir l&apos;exactitude, la précision ou
               l&apos;exhaustivité des informations mises à disposition sur ce site.
             </p>
             <p>
-              Siva décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des
+              Kobaye décline toute responsabilité pour toute imprécision, inexactitude ou omission portant sur des
               informations disponibles sur le site, ainsi que pour tout dommage résultant d&apos;une intrusion
               frauduleuse d&apos;un tiers.
             </p>
@@ -69,7 +69,7 @@ export default function MentionsLegalesPage() {
           <section>
             <h2>5. Liens hypertextes</h2>
             <p>
-              Le site peut contenir des liens hypertextes vers d&apos;autres sites. Siva n&apos;exerce aucun contrôle
+              Le site peut contenir des liens hypertextes vers d&apos;autres sites. Kobaye n&apos;exerce aucun contrôle
               sur ces sites et décline toute responsabilité quant à leur contenu ou aux pratiques de confidentialité
               qu&apos;ils appliquent.
             </p>

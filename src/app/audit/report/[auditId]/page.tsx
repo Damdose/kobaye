@@ -229,7 +229,7 @@ function ReportContent() {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-2 text-sm text-warm-400 mb-6">
             <div className="flex items-center gap-2">
-              <img src="/logo.svg" alt="Siva" className="h-5" />
+              <img src="/logo.svg" alt="Kobaye" className="h-5" />
             </div>
             <span className="text-warm-200">/</span>
             <span className="text-warm-600 font-medium">Rapport d&apos;audit</span>
@@ -437,7 +437,7 @@ function ReportContent() {
       <footer className="py-10 px-6 border-t border-warm-100 mt-4">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-body-sm text-warm-400">
           <div className="flex items-center gap-2">
-            <img src="/logo.svg" alt="Siva" className="h-5" />
+            <img src="/logo.svg" alt="Kobaye" className="h-5" />
           </div>
           <div className="flex items-center gap-4">
             <a href={report.placeDetails.googleMapsUri} target="_blank" rel="noopener noreferrer" className="hover:text-warm-600 flex items-center gap-1.5 transition-colors">

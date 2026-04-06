@@ -12,13 +12,13 @@ import "./globals.css";
 const instrumentSerif = Instrument_Serif({ weight: "400", subsets: ["latin"], style: ["normal", "italic"], variable: "--font-instrument-serif" });
 
 export const metadata: Metadata = {
-  title: "Siva — Audit gratuit de visibilité Google Business Profile",
+  title: "Kobaye — Obtenez des avis Google authentiques grâce à de vraies expériences clients",
   description:
-    "Découvrez pourquoi vos concurrents vous dépassent sur Google Maps. Audit gratuit avec score, heatmap, analyse des concurrents et recommandations IA.",
+    "Nous envoyons de vrais utilisateurs tester votre produit. Les satisfaits laissent un avis public. Les autres vous font un retour privé pour améliorer votre offre.",
   openGraph: {
-    title: "Siva — Audit gratuit de visibilité Google Business Profile",
+    title: "Kobaye — Obtenez des avis Google authentiques grâce à de vraies expériences clients",
     description:
-      "Analysez votre fiche Google Business Profile gratuitement. Score, heatmap, concurrents et recommandations IA.",
+      "Nous envoyons de vrais utilisateurs tester votre produit. Les satisfaits laissent un avis public. Les autres vous font un retour privé pour améliorer votre offre.",
     type: "website",
   },
 };

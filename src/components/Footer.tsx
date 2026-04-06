@@ -96,8 +96,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:contact@siva.local" className="text-sm text-white/60 transition-colors hover:text-white">
-                  contact@siva.local
+                <a href="mailto:contact@kobaye.fr" className="text-sm text-white/60 transition-colors hover:text-white">
+                  contact@kobaye.fr
                 </a>
               </li>
               <li>
@@ -140,7 +140,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-white/10 pt-5 sm:mt-10 sm:pt-6">
           <p className="text-center text-[11px] text-white/30 sm:text-xs">
-            &copy; {new Date().getFullYear()} Siva. Tous droits réservés.
+            &copy; {new Date().getFullYear()} Kobaye. Tous droits réservés.
           </p>
         </div>
       </div>

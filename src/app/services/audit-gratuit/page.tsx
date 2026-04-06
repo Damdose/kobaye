@@ -189,7 +189,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Que faire après avoir reçu mon audit ?',
-    a: 'Vous pouvez appliquer les recommandations vous-même, ou prendre rendez-vous avec un expert Siva pour un accompagnement personnalisé. Notre offre d\'optimisation de fiche à 500€ reprend exactement les points identifiés par l\'audit.',
+    a: 'Vous pouvez appliquer les recommandations vous-même, ou prendre rendez-vous avec un expert Kobaye pour un accompagnement personnalisé. Notre offre d\'optimisation de fiche à 500€ reprend exactement les points identifiés par l\'audit.',
   },
   {
     q: 'L\'audit fonctionne pour tous les types de commerces ?',

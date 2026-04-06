@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Politique de confidentialité — Siva',
-  description: 'Politique de confidentialité du site Siva. Découvrez comment nous protégeons vos données personnelles.',
+  title: 'Politique de confidentialité — Kobaye',
+  description: 'Politique de confidentialité du site Kobaye. Découvrez comment nous protégeons vos données personnelles.',
 };
 
 export default function PolitiqueConfidentialitePage() {
@@ -25,10 +25,10 @@ export default function PolitiqueConfidentialitePage() {
           <section>
             <h2>1. Responsable du traitement</h2>
             <p>
-              Le responsable du traitement des données collectées sur le site <strong>siva.local</strong> est la
-              société Siva, dont le siège social est situé à Paris, France.
+              Le responsable du traitement des données collectées sur le site <strong>kobaye.fr</strong> est la
+              société Kobaye, dont le siège social est situé à Paris, France.
             </p>
-            <p>Contact : contact@siva.local</p>
+            <p>Contact : contact@kobaye.fr</p>
           </section>
 
           <section>
@@ -94,7 +94,7 @@ export default function PolitiqueConfidentialitePage() {
               <li>Droit d&apos;opposition</li>
             </ul>
             <p>
-              Pour exercer ces droits, contactez-nous à <strong>contact@siva.local</strong>. Nous nous engageons à
+              Pour exercer ces droits, contactez-nous à <strong>contact@kobaye.fr</strong>. Nous nous engageons à
               répondre dans un délai de 30 jours.
             </p>
           </section>

@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const city = getCityBySlug(ville);
   if (!city) return {};
 
-  const title = `Agence SEO Local ${city.name} — Dominez Google Maps à ${city.name} | Siva`;
+  const title = `Agence SEO Local ${city.name} — Dominez Google Maps à ${city.name} | Kobaye`;
   const description = `Agence SEO local spécialisée à ${city.name}. Optimisez votre fiche Google Business, dominez Google Maps dans ${city.region} et attirez plus de clients locaux. Audit gratuit.`;
 
   return {

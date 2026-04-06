@@ -105,7 +105,7 @@ const GLOSSARY_ENTRIES: GlossaryEntry[] = [
   {
     term: 'Marketplace B2B2C',
     definition:
-      "Modèle de plateforme à deux faces qui connecte des entreprises (B2B) et des consommateurs (B2C). Siva fonctionne sur ce modèle en connectant des businesses avec des testeurs.",
+      "Modèle de plateforme à deux faces qui connecte des entreprises (B2B) et des consommateurs (B2C). Kobaye fonctionne sur ce modèle en connectant des businesses avec des testeurs.",
     category: 'Business',
   },
   {

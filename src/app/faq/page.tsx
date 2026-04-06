@@ -23,8 +23,8 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     icon: 'map-pin' as const,
     items: [
       {
-        q: 'Qu\'est-ce que Siva fait concrètement ?',
-        a: 'Siva est une plateforme qui organise des expériences clients réelles pour générer de la preuve sociale authentique. Nous connectons des entreprises qui veulent des avis authentiques avec des testeurs qualifiés qui testent leurs produits et services gratuitement en échange de leur retour honnête.',
+        q: 'Qu\'est-ce que Kobaye fait concrètement ?',
+        a: 'Kobaye est une plateforme qui organise des expériences clients réelles pour générer de la preuve sociale authentique. Nous connectons des entreprises qui veulent des avis authentiques avec des testeurs qualifiés qui testent leurs produits et services gratuitement en échange de leur retour honnête.',
       },
       {
         q: 'Comment ça marche ?',
@@ -256,7 +256,7 @@ export default function FAQPage() {
           <Reveal>
             <p className="section-label mb-4 justify-center">FAQ</p>
             <h1 className="text-balance text-heading-xl sm:text-display text-warm-900">
-              Tout savoir sur <span className="serif-accent">Siva</span>
+              Tout savoir sur <span className="serif-accent">Kobaye</span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-body-sm sm:text-body-lg text-warm-500">
               {totalQuestions} réponses sur notre plateforme, nos opérations et notre approche de la preuve sociale.
